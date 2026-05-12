@@ -206,6 +206,31 @@
   /* ── MELHOR DATA NO CARD ── */
   .tag-melhor-data { background: #E8F4E8; color: #2E6B2E; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 8px; margin-top: 4px; display: inline-block; }
 
+  /* ── ABAS DO MODAL ── */
+  .modal-tabs { display: flex; border-bottom: 1px solid var(--gray-200); margin-bottom: 16px; gap: 0; }
+  .modal-tab-btn { padding: 9px 18px; font-size: 12px; font-weight: 600; cursor: pointer; border: none; background: none; color: var(--gray-500); border-bottom: 2px solid transparent; transition: all .15s; font-family: var(--font); }
+  .modal-tab-btn:hover { color: var(--blue-mid); }
+  .modal-tab-btn.active { color: var(--blue-dark); border-bottom-color: var(--blue-mid); }
+  .modal-tab-panel { display: none; }
+  .modal-tab-panel.active { display: block; }
+
+  /* ── HISTÓRICO ── */
+  .historico-list { display: flex; flex-direction: column; gap: 0; }
+  .historico-item { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--gray-100); position: relative; }
+  .historico-item:last-child { border-bottom: none; }
+  .historico-dot { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+  .historico-dot.aguardando { background: #e8eaed; color: #4a5568; }
+  .historico-dot.comercial  { background: #D6E4F0; color: #1A3A5C; }
+  .historico-dot.compras    { background: #EAE6F5; color: #3D2F6A; }
+  .historico-dot.pcp        { background: #F5EDD6; color: #5A4010; }
+  .historico-dot.aprovado   { background: var(--green-light); color: var(--green); }
+  .historico-dot.reprovado  { background: var(--red-light); color: var(--red); }
+  .historico-dot.default    { background: var(--gray-100); color: var(--gray-500); }
+  .historico-body h4 { font-size: 13px; font-weight: 600; color: var(--gray-700); margin-bottom: 2px; }
+  .historico-body .hist-data { font-size: 11px; color: var(--gray-500); margin-bottom: 4px; }
+  .historico-body .hist-parecer { font-size: 12px; color: var(--gray-600); background: var(--gray-100); border-radius: 4px; padding: 5px 9px; margin-top: 4px; line-height: 1.5; }
+  .hist-loading { font-size: 13px; color: var(--gray-500); text-align: center; padding: 20px; }
+
   /* ── PARECER NOVO (qualquer coluna) ── */
   .novo-parecer-wrap { margin-top: 12px; }
   .novo-parecer-wrap label { font-size: 12px; color: var(--gray-500); display: block; margin-bottom: 4px; font-weight: 500; }
@@ -568,6 +593,12 @@ function renderModal() {
   const pill = st => { const cls=st==='Aprovado'?'aprovado':st==='Reprovado'?'reprovado':st&&st.startsWith('Em')?'em-analise':'pendente'; return `<span class="status-pill ${cls}">${st||'Pendente'}</span>`; };
   const colBtns = COLUNAS.map(col => { const cur=(s.status_geral||'Aguardando análise')===col, nov=novoStatus===col; return `<button class="move-col-btn${cur||nov?' current':''}" onclick="selecionarStatus('${col}')">${col.replace('Em análise — ','')}</button>`; }).join('');
   document.getElementById('modal-body').innerHTML = `
+    <div class="modal-tabs">
+      <button class="modal-tab-btn active" onclick="trocarAbaModal('detalhes',this)">Detalhes</button>
+      <button class="modal-tab-btn" onclick="trocarAbaModal('historico',this)">Histórico</button>
+    </div>
+
+    <div class="modal-tab-panel active" id="modal-tab-detalhes">
     <div class="modal-section"><h4>Identificação</h4>
       <div class="modal-grid">
         <div class="modal-field"><span>Representante</span><b>${s.representante||'—'}</b></div>
@@ -616,8 +647,92 @@ function renderModal() {
         <label>Parecer / observação</label>
         <textarea id="parecer-input" placeholder="Observação adicional (opcional)..."></textarea>
       </div>
-    </div>`:''}`;
+    </div>`:''}
+    </div>
+
+    <div class="modal-tab-panel" id="modal-tab-historico">
+      <div class="hist-loading" id="hist-loading">Carregando histórico...</div>
+      <div class="historico-list" id="historico-list" style="display:none"></div>
+    </div>
+    `;
   if (ADMIN) document.getElementById('btn-salvar-modal').style.display = '';
+}
+
+function trocarAbaModal(aba, btn) {
+  document.querySelectorAll('.modal-tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.modal-tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('modal-tab-' + aba).classList.add('active');
+  if (aba === 'historico') carregarHistorico(cardAtual.protocolo);
+}
+
+function statusDotClass(status) {
+  if (!status) return 'default';
+  if (status.includes('Comercial')) return 'comercial';
+  if (status.includes('Compras'))   return 'compras';
+  if (status.includes('PCP'))       return 'pcp';
+  if (status === 'Aprovado')        return 'aprovado';
+  if (status === 'Reprovado')       return 'reprovado';
+  if (status === 'Aguardando análise') return 'aguardando';
+  return 'default';
+}
+
+function statusIcone(status) {
+  if (!status) return '○';
+  if (status.includes('Comercial')) return 'C';
+  if (status.includes('Compras'))   return 'Co';
+  if (status.includes('PCP'))       return 'P';
+  if (status === 'Aprovado')        return '✓';
+  if (status === 'Reprovado')       return '✕';
+  return '○';
+}
+
+async function carregarHistorico(protocolo) {
+  const listEl    = document.getElementById('historico-list');
+  const loadEl    = document.getElementById('hist-loading');
+  if (!listEl || !loadEl) return;
+  loadEl.style.display = 'block';
+  listEl.style.display = 'none';
+  try {
+    const res = await fetch(
+      SB_URL + '/rest/v1/historico_movimentacoes?protocolo=eq.' + encodeURIComponent(protocolo) + '&order=movido_em.desc',
+      { headers: SB_H }
+    );
+    const hist = await res.json();
+    if (!hist.length) {
+      loadEl.textContent = 'Nenhuma movimentação registrada ainda.';
+      return;
+    }
+    listEl.innerHTML = hist.map(h => {
+      const dotCls = statusDotClass(h.status_para);
+      const icone  = statusIcone(h.status_para);
+      const data   = h.movido_em ? fmtDataBR(h.movido_em) : '—';
+      const de     = h.status_de ? `<span style="color:var(--gray-500)"> · de: ${h.status_de}</span>` : '';
+      const parecer = h.parecer ? `<div class="hist-parecer">${h.parecer}</div>` : '';
+      return `<div class="historico-item">
+        <div class="historico-dot ${dotCls}">${icone}</div>
+        <div class="historico-body">
+          <h4>${h.status_para}${de}</h4>
+          <div class="hist-data">${data}</div>
+          ${parecer}
+        </div>
+      </div>`;
+    }).join('');
+    loadEl.style.display = 'none';
+    listEl.style.display = 'flex';
+  } catch(e) {
+    loadEl.textContent = 'Erro ao carregar histórico.';
+  }
+}
+
+async function gravarHistorico(protocolo, statusDe, statusPara, parecer) {
+  try {
+    await fetch(SB_URL + '/rest/v1/historico_movimentacoes', {
+      method:  'POST',
+      headers: { ...SB_H, 'Prefer': 'return=minimal' },
+      body:    JSON.stringify({ protocolo, status_de: statusDe, status_para: statusPara, parecer: parecer || '' })
+    });
+  } catch(e) { console.warn('Histórico erro:', e); }
 }
 
 function selecionarStatus(status) {
@@ -695,6 +810,13 @@ async function salvarMovimentacao() {
     if (!res.ok) throw new Error(await res.text());
     const idx=dados.findIndex(s=>s.protocolo===cardAtual.protocolo);
     if (idx!==-1) Object.assign(dados[idx],patch);
+    // Grava no histórico
+    const statusAnterior = cardAtual.status_geral || 'Aguardando análise';
+    const parecerHist    = novoStatus === 'Reprovado'
+      ? (document.getElementById('motivo-reprova-input')?.value||'').trim()
+      : (document.getElementById('parecer-input')?.value||'').trim();
+    gravarHistorico(cardAtual.protocolo, statusAnterior, novoStatus, parecerHist);
+
     fecharModalBtn(); renderBoard();
     if (novoStatus) showToast('Movido para: '+novoStatus, 'success');
   } catch(e) { showToast('Erro ao salvar: '+e.message,'error'); }
