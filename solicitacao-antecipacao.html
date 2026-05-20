@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solicitação de Antecipação de Entrega</title>
+<title>GATE-IA — Kanban de Antecipações</title>
+<link rel="icon" type="image/jpeg" href="data:image/jpeg;base64,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">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -11,765 +12,1122 @@
     --green: #4A6741; --green-light: #DDE8DC;
     --amber: #7A6030; --amber-light: #F5EDD6;
     --red: #8C3A3A; --red-light: #F2DEDE;
+    --purple: #5A4E7A; --purple-light: #EAE6F5;
     --gray-100: #F2F2F0; --gray-200: #E0E0DD; --gray-500: #888884; --gray-700: #3D3E39;
-    --radius: 10px; --radius-sm: 6px; --border: 1px solid #e0e0e0;
     --font: 'Segoe UI', Arial, sans-serif;
+    --radius: 10px; --radius-sm: 6px;
   }
   body { font-family: var(--font); background: #F5F5F3; color: var(--gray-700); min-height: 100vh; }
 
-  .page-header { background: #3D3E39; color: #FFFAF3; padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; }
-  .page-header h1 { font-size: 17px; font-weight: 600; }
-  .page-header span { font-size: 12px; opacity: .65; }
+  /* ── HEADER ── */
+  .header { background: #3D3E39; color: #FFFAF3; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .header h1 { font-size: 16px; font-weight: 600; }
+  .header-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .search-box { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: var(--radius-sm); padding: 7px 12px; color: #fff; font-size: 13px; font-family: var(--font); outline: none; width: 240px; }
+  .search-box::placeholder { color: rgba(255,255,255,.5); }
+  .search-box:focus { border-color: rgba(255,255,255,.6); }
+  .filter-sel { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: var(--radius-sm); padding: 7px 10px; color: #fff; font-size: 13px; font-family: var(--font); outline: none; cursor: pointer; }
+  .filter-sel option { color: #333; background: #fff; }
+  .btn-refresh { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3); border-radius: var(--radius-sm); padding: 7px 14px; color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; transition: background .15s; }
+  .btn-refresh:hover { background: rgba(255,255,255,.25); }
+  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; display: inline-block; margin-right: 5px; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+  .live-label { font-size: 11px; opacity: .8; display: flex; align-items: center; }
 
-  .progress-bar { background: #fff; border-bottom: var(--border); padding: 0 32px; }
-  .steps { display: flex; max-width: 860px; margin: 0 auto; }
-  .step { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 14px 8px; gap: 6px; border-bottom: 3px solid transparent; }
-  .step.active { border-bottom-color: var(--blue-mid); }
-  .step.done   { border-bottom-color: var(--green); }
-  .step-circle { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; background: var(--gray-200); color: var(--gray-500); }
-  .step.active .step-circle { background: var(--blue-mid); color: #fff; }
-  .step.done   .step-circle { background: var(--green); color: #fff; }
-  .step-label { font-size: 11px; color: var(--gray-500); text-align: center; line-height: 1.3; }
-  .step.active .step-label { color: var(--blue-mid); font-weight: 600; }
-  .step.done   .step-label { color: var(--green); }
+  /* ── TABS (só admin) ── */
+  .tabs-bar { background: #fff; border-bottom: 1px solid var(--gray-200); padding: 0 24px; display: flex; gap: 0; }
+  .tab-btn { padding: 12px 20px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; background: none; color: var(--gray-500); border-bottom: 3px solid transparent; transition: all .15s; }
+  .tab-btn:hover { color: var(--blue-mid); }
+  .tab-btn.active { color: var(--blue-dark); border-bottom-color: var(--blue-mid); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
 
-  .container { max-width: 860px; margin: 28px auto; padding: 0 16px 48px; }
-  .card { background: #fff; border-radius: var(--radius); border: var(--border); margin-bottom: 16px; overflow: visible; }
-  .card-header { background: var(--blue-50); border-bottom: var(--border); padding: 12px 20px; font-size: 12px; font-weight: 600; color: var(--blue-dark); text-transform: uppercase; letter-spacing: .06em; border-radius: var(--radius) var(--radius) 0 0; display: flex; align-items: center; justify-content: space-between; }
-  .card-body { padding: 20px; }
+  /* ── STATS BAR ── */
+  .stats-bar { background: #fff; border-bottom: 1px solid var(--gray-200); padding: 10px 24px; display: flex; gap: 20px; flex-wrap: wrap; }
+  .stat { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .stat-num { font-size: 20px; font-weight: 700; color: var(--blue-dark); line-height: 1; }
+  .stat-lbl { font-size: 10px; color: var(--gray-500); text-transform: uppercase; letter-spacing: .04em; }
+  .stat-sep { width: 1px; background: var(--gray-200); align-self: stretch; }
 
-  .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .field-grid.three { grid-template-columns: 1fr 1fr 1fr; }
-  .field { display: flex; flex-direction: column; gap: 5px; }
-  label { font-size: 12px; color: var(--gray-500); font-weight: 500; }
-  label .req { color: #e24b4a; }
-  input, select, textarea { border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 8px 11px; font-size: 13px; font-family: var(--font); color: var(--gray-700); background: #fff; outline: none; transition: border-color .15s; }
-  input:focus, select:focus, textarea:focus { border-color: var(--blue-mid); }
-  textarea { resize: vertical; min-height: 68px; }
+  /* ── BOARD ── */
+  .board-wrap { overflow-x: auto; padding: 20px 24px 40px; }
+  .board { display: flex; gap: 14px; min-width: max-content; align-items: flex-start; }
+  .col { width: 280px; border-radius: var(--radius); background: #e8eaed; display: flex; flex-direction: column; max-height: calc(100vh - 200px); }
+  .col-header { padding: 12px 14px 10px; border-radius: var(--radius) var(--radius) 0 0; display: flex; align-items: center; justify-content: space-between; }
+  .col-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+  .col-count { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+  .col-body { padding: 8px; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 8px; min-height: 80px; }
 
-  .chip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
-  .chip { border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 9px 13px; font-size: 12px; cursor: pointer; background: var(--gray-100); color: var(--gray-700); text-align: left; transition: all .15s; }
-  .chip:hover { border-color: var(--blue-mid); }
-  .chip.sel { border: 2px solid var(--blue-mid); background: var(--blue-50); color: var(--blue-dark); font-weight: 600; }
+  .col-aguardando .col-header { background: #dde3ea; } .col-aguardando .col-title { color: #4a5568; } .col-aguardando .col-count { background: #a0aec0; color: #fff; }
+  .col-comercial  .col-header { background: #D6E4F0; } .col-comercial  .col-title { color: var(--blue-dark); } .col-comercial  .col-count { background: var(--blue-mid); color: #fff; }
+  .col-pcp        .col-header { background: var(--amber-light); } .col-pcp .col-title { color: var(--amber); } .col-pcp .col-count { background: var(--amber); color: #fff; }
+  .col-compras    .col-header { background: var(--purple-light); } .col-compras .col-title { color: var(--purple); } .col-compras .col-count { background: var(--purple); color: #fff; }
+  .col-aprovado   .col-header { background: var(--green-light); } .col-aprovado .col-title { color: var(--green); } .col-aprovado .col-count { background: var(--green); color: #fff; }
+  .col-reprovado  .col-header { background: var(--red-light); } .col-reprovado .col-title { color: var(--red); } .col-reprovado .col-count { background: var(--red); color: #fff; }
 
-  .urg-row { display: flex; gap: 8px; margin-top: 4px; }
-  .urg-btn { flex: 1; padding: 9px; border: 1px solid var(--gray-200); border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; cursor: pointer; background: var(--gray-100); text-align: center; transition: all .15s; }
-  .urg-btn.sel-baixa { border: 2px solid #1D7044; background: var(--green-light); color: var(--green); }
-  .urg-btn.sel-media { border: 2px solid #854F0B; background: var(--amber-light); color: var(--amber); }
-  .urg-btn.sel-alta  { border: 2px solid #A32D2D; background: var(--red-light);   color: var(--red); }
+  /* ── CARD ── */
+  .card { background: #fff; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); padding: 12px; cursor: pointer; transition: box-shadow .15s, transform .1s; user-select: none; }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.1); transform: translateY(-1px); }
+  .card.dragging { opacity: .5; transform: rotate(1deg); }
+  .card-prot { font-size: 11px; font-weight: 700; color: var(--blue-mid); letter-spacing: .04em; margin-bottom: 6px; }
+  .card-rep  { font-size: 12px; font-weight: 600; color: var(--gray-700); margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card-pedido { font-size: 11px; color: var(--gray-500); margin-bottom: 8px; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+  .tag { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 8px; }
+  .tag-urg-Alta  { background: var(--red-light);   color: var(--red); }
+  .tag-urg-Média { background: var(--amber-light); color: var(--amber); }
+  .tag-urg-Baixa { background: var(--green-light); color: var(--green); }
+  .tag-prazo { background: var(--blue-50); color: var(--blue-dark); }
+  .tag-antec { background: #FFF2CC; color: #854F0B; }
+  .card-prods { font-size: 11px; color: var(--gray-500); margin-bottom: 8px; }
+  .card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 8px; border-top: 1px solid var(--gray-100); }
+  .card-data { font-size: 10px; color: var(--gray-500); }
+  .card-move-btn { font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 6px; border: 1px solid var(--gray-200); background: var(--gray-100); color: var(--gray-700); cursor: pointer; transition: all .15s; }
+  .card-move-btn:hover { background: var(--blue-50); border-color: var(--blue-mid); color: var(--blue-mid); }
+  .col-body.drag-over { background: rgba(46,109,164,.08); border: 2px dashed var(--blue-mid); border-radius: var(--radius-sm); }
 
-  .info-row { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
-  .badge { font-size: 12px; padding: 4px 11px; border-radius: 20px; border: 1px solid var(--gray-200); background: var(--gray-100); color: var(--gray-700); }
-  .badge.warn { background: var(--amber-light); color: var(--amber); border-color: #e6c96a; }
+  /* ── MODAL ── */
+  .modal-bg { display:none; position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:1000; align-items:center; justify-content:center; padding:16px; }
+  .modal-bg.open { display:flex; }
+  .modal { background:#fff; border-radius:var(--radius); width:100%; max-width:560px; max-height:90vh; overflow-y:auto; }
+  .modal-header { background:var(--blue-dark); color:#fff; padding:16px 20px; border-radius:var(--radius) var(--radius) 0 0; display:flex; align-items:center; justify-content:space-between; }
+  .modal-header h3 { font-size:15px; font-weight:600; }
+  .modal-close { background:none; border:none; color:#fff; font-size:20px; cursor:pointer; line-height:1; }
+  .modal-body { padding:20px; }
+  .modal-section { margin-bottom:16px; }
+  .modal-section h4 { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--gray-500); margin-bottom:8px; }
+  .modal-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .modal-field { font-size:13px; }
+  .modal-field span { display:block; font-size:11px; color:var(--gray-500); margin-bottom:2px; }
+  .modal-field b { color:var(--gray-700); }
+  .prod-list { display:flex; flex-direction:column; gap:4px; }
+  .prod-item { background:var(--gray-100); border-radius:4px; padding:5px 10px; font-size:12px; display:flex; justify-content:space-between; }
+  .status-track { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px; }
+  .status-pill { font-size:11px; font-weight:600; padding:4px 12px; border-radius:10px; }
+  .status-pill.pendente   { background:#e8eaed; color:#4a5568; }
+  .status-pill.em-analise { background:var(--blue-50); color:var(--blue-dark); }
+  .status-pill.aprovado   { background:var(--green-light); color:var(--green); }
+  .status-pill.reprovado  { background:var(--red-light); color:var(--red); }
+  .move-section { background:var(--gray-100); border-radius:var(--radius-sm); padding:14px; }
+  .move-section h4 { font-size:12px; font-weight:600; color:var(--gray-700); margin-bottom:10px; }
+  .move-cols { display:flex; gap:8px; flex-wrap:wrap; }
+  .move-col-btn { padding:8px 14px; font-size:12px; font-weight:600; border-radius:var(--radius-sm); border:1.5px solid var(--gray-200); background:#fff; cursor:pointer; transition:all .15s; }
+  .move-col-btn:hover { border-color:var(--blue-mid); background:var(--blue-50); color:var(--blue-dark); }
+  .move-col-btn.current { border-color:var(--blue-mid); background:var(--blue-50); color:var(--blue-dark); }
+  .parecer-area { margin-top:10px; }
+  .parecer-area label { font-size:12px; color:var(--gray-500); display:block; margin-bottom:4px; }
+  .parecer-area textarea { width:100%; border:1px solid var(--gray-200); border-radius:var(--radius-sm); padding:8px; font-size:13px; font-family:var(--font); resize:vertical; min-height:60px; outline:none; }
+  .parecer-area textarea:focus { border-color:var(--blue-mid); }
+  .modal-footer { padding:16px 20px; border-top:1px solid var(--gray-200); display:flex; gap:10px; justify-content:flex-end; }
+  .btn { padding:9px 20px; border-radius:var(--radius-sm); font-size:13px; font-weight:600; cursor:pointer; border:1px solid var(--gray-200); background:var(--gray-100); color:var(--gray-700); transition:all .15s; }
+  .btn:hover { background:var(--gray-200); }
+  .btn.primary { background:var(--blue-mid); color:#fff; border-color:var(--blue-mid); }
+  .btn.primary:hover { background:var(--blue-dark); }
 
-  .diff-label { font-size: 12px; color: var(--amber); font-weight: 600; margin-top: 5px; display: none; }
-  .section-sep { height: 1px; background: var(--gray-200); margin: 18px 0; }
+  /* ── PARECERES POR SETOR ── */
+  .pareceres-wrap { display: flex; flex-direction: column; gap: 10px; margin-bottom: 4px; }
+  .parecer-bloco { border-radius: var(--radius-sm); overflow: hidden; border: 1px solid; }
+  .parecer-bloco-header { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+  .parecer-bloco-body { padding: 10px 12px; font-size: 13px; line-height: 1.5; }
+  .parecer-bloco-body textarea { width: 100%; border: none; background: transparent; font-size: 13px; font-family: var(--font); resize: vertical; min-height: 60px; outline: none; line-height: 1.5; }
+  .parecer-edit-btn { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 4px; cursor: pointer; border: 1px solid; background: transparent; transition: all .15s; }
+  .parecer-save-btn { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 4px; cursor: pointer; border: none; transition: all .15s; }
 
-  .btn-row { display: flex; gap: 10px; margin-top: 20px; justify-content: flex-end; }
-  .btn { padding: 10px 22px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid var(--gray-200); background: var(--gray-100); color: var(--gray-700); transition: all .15s; }
-  .btn:hover { background: var(--gray-200); }
-  .btn.primary { background: var(--blue-mid); color: #fff; border-color: var(--blue-mid); }
-  .btn.primary:hover { background: var(--blue-dark); }
-  .btn.sm { padding: 6px 14px; font-size: 12px; }
-  .btn.danger-outline { border-color: #f09595; color: var(--red); background: #fff; }
-  .btn.danger-outline:hover { background: var(--red-light); }
+  /* Comercial — azul */
+  .parecer-comercial { border-color: #2E6DA4; }
+  .parecer-comercial .parecer-bloco-header { background: #D6E4F0; color: #1A3A5C; }
+  .parecer-comercial .parecer-bloco-body { background: #EAF2FA; color: #1A3A5C; }
+  .parecer-comercial .parecer-bloco-body textarea { color: #1A3A5C; }
+  .parecer-comercial .parecer-edit-btn { color: #2E6DA4; border-color: #2E6DA4; }
+  .parecer-comercial .parecer-save-btn { background: #2E6DA4; color: #fff; }
 
-  .err-box { background: var(--red-light); color: var(--red); border: 1px solid #f09595; border-radius: var(--radius-sm); padding: 9px 13px; font-size: 12px; display: none; margin-top: 12px; }
-  .panel { display: none; }
-  .panel.active { display: block; }
+  /* Compras — roxo */
+  .parecer-compras { border-color: #5A4E7A; }
+  .parecer-compras .parecer-bloco-header { background: #EAE6F5; color: #3D2F6A; }
+  .parecer-compras .parecer-bloco-body { background: #F2EFF9; color: #3D2F6A; }
+  .parecer-compras .parecer-bloco-body textarea { color: #3D2F6A; }
+  .parecer-compras .parecer-edit-btn { color: #5A4E7A; border-color: #5A4E7A; }
+  .parecer-compras .parecer-save-btn { background: #5A4E7A; color: #fff; }
 
-  /* ── PRODUTO BUSCA ─────────────────────────────────── */
-  .prod-search-wrap { position: relative; }
-  .prod-dropdown { display:none; position:absolute; top:calc(100% + 2px); left:0; right:0; background:#fff; border:1px solid #e0e0e0; border-radius: 0 0 var(--radius-sm) var(--radius-sm); max-height:220px; overflow-y:auto; z-index:200; box-shadow:0 6px 16px rgba(0,0,0,.1); }
-  .prod-option { padding:9px 12px; font-size:13px; cursor:pointer; border-bottom:0.5px solid #f0f0f0; display:flex; justify-content:space-between; align-items:center; }
-  .prod-option:hover { background: var(--blue-50); }
-  .prod-option-prazo { font-size:11px; color:var(--blue-mid); font-weight:600; white-space:nowrap; margin-left:10px; background: var(--blue-50); padding: 2px 8px; border-radius: 10px; }
+  /* PCP — âmbar */
+  .parecer-pcp { border-color: #7A6030; }
+  .parecer-pcp .parecer-bloco-header { background: #F5EDD6; color: #5A4010; }
+  .parecer-pcp .parecer-bloco-body { background: #FAF3E0; color: #5A4010; }
+  .parecer-pcp .parecer-bloco-body textarea { color: #5A4010; }
+  .parecer-pcp .parecer-edit-btn { color: #7A6030; border-color: #7A6030; }
+  .parecer-pcp .parecer-save-btn { background: #7A6030; color: #fff; }
+  /* ── MOTIVO REPROVAÇÃO NO CARD ── */
 
-  /* ── TABELA DE PRODUTOS ────────────────────────────── */
-  .prod-table-wrap { margin-top: 14px; }
-  .prod-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .prod-table th { background: var(--blue-mid); color: #fff; padding: 9px 12px; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; text-align: left; }
-  .prod-table th:last-child { width: 90px; text-align: center; }
-  .prod-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-200); vertical-align: middle; }
-  .prod-table tr:last-child td { border-bottom: none; }
-  .prod-table tr:nth-child(even) td { background: #f9f9f9; }
-  .prod-table .prazo-pill { display:inline-block; padding:2px 9px; border-radius:10px; font-size:11px; font-weight:600; }
-  .prod-table .prazo-45 { background: var(--green-light); color: var(--green); }
-  .prod-table .prazo-50 { background: var(--amber-light); color: var(--amber); }
-  .prod-table .prazo-60 { background: var(--red-light); color: var(--red); }
-  .prod-table .td-actions { text-align: center; display: flex; gap: 6px; justify-content: center; }
-  .icon-btn { width:30px; height:30px; border:1px solid var(--gray-200); border-radius: var(--radius-sm); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:14px; transition: all .15s; }
-  .icon-btn:hover { background: var(--gray-100); }
-  .icon-btn.edit:hover { border-color: var(--blue-mid); color: var(--blue-mid); }
-  .icon-btn.del:hover  { border-color: #f09595; color: var(--red); background: var(--red-light); }
+  /* ── LOADING / EMPTY ── */
+  .empty-col { text-align:center; padding:20px 10px; color:var(--gray-500); font-size:12px; }
+  .loading-wrap { display:flex; align-items:center; justify-content:center; height:200px; gap:10px; color:var(--gray-500); font-size:14px; }
+  .spinner { width:20px; height:20px; border:2px solid var(--gray-200); border-top-color:var(--blue-mid); border-radius:50%; animation:spin .7s linear infinite; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  .toast { position:fixed; bottom:24px; right:24px; background:var(--blue-dark); color:#fff; padding:12px 20px; border-radius:var(--radius-sm); font-size:13px; font-weight:500; z-index:9999; transform:translateY(80px); opacity:0; transition:all .3s; }
+  .toast.show { transform:translateY(0); opacity:1; }
+  .toast.success { background:var(--green); }
+  .toast.error   { background:var(--red); }
 
-  /* ── LINHA DE ADICIONAR PRODUTO ───────────────────── */
-  .add-prod-row { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: end; margin-top: 14px; }
-  .prod-qtd-wrap { width: 80px; }
-  .add-prod-btn { white-space: nowrap; }
-  .empty-state { text-align:center; padding: 20px; color: var(--gray-500); font-size: 13px; border: 1.5px dashed var(--gray-200); border-radius: var(--radius-sm); margin-top: 14px; }
+  /* ── FILTROS DASHBOARD ── */
+  .dash-filters { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 14px 18px; margin-bottom: 22px; display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-end; }
+  .dash-filter-group { display: flex; flex-direction: column; gap: 4px; }
+  .dash-filter-group label { font-size: 11px; color: var(--gray-500); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+  .dash-filter-group select, .dash-filter-group input { border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 7px 11px; font-size: 13px; font-family: var(--font); color: var(--gray-700); background: #fff; outline: none; min-width: 180px; }
+  .dash-filter-group select:focus, .dash-filter-group input:focus { border-color: var(--blue-mid); }
+  .btn-dash-filter { padding: 8px 18px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; cursor: pointer; background: var(--blue-mid); color: #fff; border: none; transition: background .15s; align-self: flex-end; }
+  .btn-dash-filter:hover { background: var(--blue-dark); }
+  .btn-dash-clear { padding: 8px 14px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; cursor: pointer; background: var(--gray-100); color: var(--gray-500); border: 1px solid var(--gray-200); transition: all .15s; align-self: flex-end; }
+  .btn-dash-clear:hover { background: var(--gray-200); }
+  .dash-filter-info { font-size: 12px; color: var(--amber); font-weight: 600; align-self: center; }
 
-  /* ── INLINE EDIT ──────────────────────────────────── */
-  .prod-table td input { padding: 5px 8px; font-size: 12px; border-radius: 4px; width: 100%; }
-  .prod-table td input[type=number] { width: 60px; }
+  /* ── DASHBOARD ── */
+  .dash-wrap { padding: 24px; max-width: 1100px; margin: 0 auto; }
+  .dash-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-bottom: 28px; }
+  .kpi-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 16px 20px; }
+  .kpi-label { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+  .kpi-num { font-size: 28px; font-weight: 700; line-height: 1; }
+  .kpi-sub { font-size: 11px; color: var(--gray-500); margin-top: 4px; }
+  .dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+  .dash-grid.full { grid-template-columns: 1fr; }
+  .dash-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; }
+  .dash-card-header { background: var(--blue-50); border-bottom: 1px solid var(--gray-200); padding: 12px 16px; font-size: 12px; font-weight: 700; color: var(--blue-dark); text-transform: uppercase; letter-spacing: .05em; }
+  .dash-card-body { padding: 16px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .bar-row:last-child { margin-bottom: 0; }
+  .bar-label { font-size: 12px; color: var(--gray-700); width: 160px; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bar-track { flex: 1; background: var(--gray-100); border-radius: 4px; height: 10px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; transition: width .6s ease; }
+  .bar-val { font-size: 12px; font-weight: 600; color: var(--gray-700); min-width: 28px; text-align: right; }
+  .donut-wrap { display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; }
+  .donut-legend { display: flex; flex-direction: column; gap: 8px; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--gray-700); }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  @media (max-width: 700px) { .dash-grid { grid-template-columns: 1fr; } .bar-label { width: 100px; } }
 
-  /* ── CONFIRMAÇÃO ──────────────────────────────────── */
-  .prot-box { background: var(--blue-50); border: 1px solid #85b7eb; border-radius: var(--radius); padding: 16px 22px; display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
-  .prot-num { font-size: 22px; font-weight: 700; color: var(--blue-dark); letter-spacing: .05em; }
-  .prot-label { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
-  .status-banner { border-radius: var(--radius); padding: 18px 22px; margin-bottom: 16px; border: var(--border); }
-  .status-banner.enviado { background: var(--green-light); border-color: #7ec9a0; }
-  .status-banner.enviado h3 { color: var(--green); font-size: 15px; font-weight: 600; margin-bottom: 4px; }
-  .status-banner p { font-size: 13px; color: var(--gray-700); }
-  .review-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .review-table td { padding: 7px 10px; border-bottom: 1px solid var(--gray-200); vertical-align: top; }
-  .review-table td:first-child { color: var(--gray-500); font-weight: 500; width: 36%; white-space: nowrap; }
+  /* ── MELHOR DATA NO CARD ── */
+  .tag-melhor-data { background: #E8F4E8; color: #2E6B2E; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 8px; margin-top: 4px; display: inline-block; }
 
-  .sending-overlay { display: none; align-items: center; justify-content: center; gap: 10px; padding: 14px; background: var(--blue-50); border-radius: var(--radius); border: 1px solid #85b7eb; font-size: 13px; color: var(--blue-dark); font-weight: 500; margin-top: 12px; }
-  .spinner { width: 18px; height: 18px; border: 2px solid #D6E4F0; border-top-color: var(--blue-mid); border-radius: 50%; animation: spin .7s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
+  /* ── ABAS DO MODAL ── */
+  .modal-tabs { display: flex; border-bottom: 1px solid var(--gray-200); margin-bottom: 16px; gap: 0; }
+  .modal-tab-btn { padding: 9px 18px; font-size: 12px; font-weight: 600; cursor: pointer; border: none; background: none; color: var(--gray-500); border-bottom: 2px solid transparent; transition: all .15s; font-family: var(--font); }
+  .modal-tab-btn:hover { color: var(--blue-mid); }
+  .modal-tab-btn.active { color: var(--blue-dark); border-bottom-color: var(--blue-mid); }
+  .modal-tab-panel { display: none; }
+  .modal-tab-panel.active { display: block; }
 
-  @media (max-width: 600px) {
-    .field-grid, .field-grid.three { grid-template-columns: 1fr; }
-    .chip-grid { grid-template-columns: 1fr; }
-    .page-header { padding: 14px 16px; }
-    .container { padding: 0 10px 40px; }
-    .add-prod-row { grid-template-columns: 1fr; }
-  }
+  /* ── HISTÓRICO ── */
+  .historico-list { display: flex; flex-direction: column; gap: 0; }
+  .historico-item { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--gray-100); position: relative; }
+  .historico-item:last-child { border-bottom: none; }
+  .historico-dot { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+  .historico-dot.aguardando { background: #e8eaed; color: #4a5568; }
+  .historico-dot.comercial  { background: #D6E4F0; color: #1A3A5C; }
+  .historico-dot.compras    { background: #EAE6F5; color: #3D2F6A; }
+  .historico-dot.pcp        { background: #F5EDD6; color: #5A4010; }
+  .historico-dot.aprovado   { background: var(--green-light); color: var(--green); }
+  .historico-dot.reprovado  { background: var(--red-light); color: var(--red); }
+  .historico-dot.default    { background: var(--gray-100); color: var(--gray-500); }
+  .historico-body h4 { font-size: 13px; font-weight: 600; color: var(--gray-700); margin-bottom: 2px; }
+  .historico-body .hist-data { font-size: 11px; color: var(--gray-500); margin-bottom: 4px; }
+  .historico-body .hist-parecer { font-size: 12px; color: var(--gray-600); background: var(--gray-100); border-radius: 4px; padding: 5px 9px; margin-top: 4px; line-height: 1.5; }
+  .hist-loading { font-size: 13px; color: var(--gray-500); text-align: center; padding: 20px; }
+
+  /* ── PARECER NOVO (qualquer coluna) ── */
+  .novo-parecer-wrap { margin-top: 12px; }
+  .novo-parecer-wrap label { font-size: 12px; color: var(--gray-500); display: block; margin-bottom: 4px; font-weight: 500; }
+  .novo-parecer-wrap textarea { width: 100%; border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 8px; font-size: 13px; font-family: var(--font); resize: vertical; min-height: 60px; outline: none; }
+  .novo-parecer-wrap textarea:focus { border-color: var(--blue-mid); }
+  .novo-parecer-wrap .setor-sel { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+  .setor-btn { padding: 5px 12px; font-size: 11px; font-weight: 700; border-radius: 4px; cursor: pointer; border: 1.5px solid; background: transparent; transition: all .15s; }
+  .setor-btn[data-setor="comercial"]       { color: #1A3A5C; border-color: #2E6DA4; }
+  .setor-btn[data-setor="comercial"].ativo { background: #D6E4F0; }
+  .setor-btn[data-setor="compras"]         { color: #3D2F6A; border-color: #5A4E7A; }
+  .setor-btn[data-setor="compras"].ativo   { background: #EAE6F5; }
+  .setor-btn[data-setor="pcp"]             { color: #5A4010; border-color: #7A6030; }
+  .setor-btn[data-setor="pcp"].ativo       { background: #F5EDD6; }
+  .parecer-del-btn { font-size: 11px; color: #8C3A3A; border: 1px solid #f09595; background: transparent; border-radius: 4px; padding: 3px 8px; cursor: pointer; transition: all .15s; }
+  .parecer-del-btn:hover { background: #F2DEDE; }
+
+  /* ── REPROVADO — campo obrigatório ── */
+  .motivo-reprova-wrap { margin-top: 10px; background: #F2DEDE; border: 1px solid #f09595; border-radius: var(--radius-sm); padding: 12px; }
+  .motivo-reprova-wrap label { font-size: 12px; font-weight: 600; color: #8C3A3A; display: block; margin-bottom: 6px; }
+  .motivo-reprova-wrap textarea { width: 100%; border: 1px solid #f09595; border-radius: var(--radius-sm); padding: 8px; font-size: 13px; font-family: var(--font); resize: vertical; min-height: 60px; outline: none; background: #fff; }
 </style>
 </head>
 <body>
 
-<div class="page-header" style="background:#3D3E39;color:#FFFAF3">
-  <div style="display:flex;align-items:center;gap:14px"><svg viewBox="487 319 306 82" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" overflow="hidden" style="height:42px;width:auto;display:block"><defs><clipPath id="clip0"><rect x="487" y="319" width="306" height="82"/></clipPath></defs><g clip-path="url(#clip0)" transform="translate(-487 -319)"><path d="M10.6057 81.2754C8.62437 81.2754 6.68416 80.9988 4.78882 80.453 2.89348 79.9072 1.29721 79.1146-0.00373835 78.0791L1.72338 75.4324C2.49722 76.0417 3.36077 76.5576 4.31779 76.9838 5.27107 77.4062 6.2879 77.7277 7.35707 77.9483 8.42997 78.1688 9.52531 78.2772 10.6505 78.2772 12.9833 78.2772 14.8562 77.8137 16.2693 76.8866 17.6861 75.9595 18.3927 74.6024 18.3927 72.808 18.3927 71.5108 17.9254 70.408 16.9945 69.5071 16.0599 68.6024 14.3253 67.78 11.7907 67.036L8.29165 66.008C5.56266 65.208 3.56638 64.165 2.29908 62.879 1.03178 61.5967 0.396265 59.9706 0.396265 58.0042 0.396265 56.6771 0.657949 55.4808 1.18506 54.4154 1.70842 53.3499 2.44862 52.4415 3.4019 51.6826 4.35891 50.9238 5.49163 50.3443 6.80379 49.9443 8.11969 49.5443 9.55895 49.3424 11.1328 49.3424 13.0281 49.3424 14.7852 49.6191 16.4039 50.1724 18.0226 50.7294 19.3759 51.4546 20.4712 52.3593L18.6768 54.8976C18.0076 54.3556 17.245 53.8883 16.3927 53.4995 15.5366 53.107 14.6319 52.8079 13.6674 52.6023 12.7029 52.4004 11.7272 52.292 10.7365 52.292 9.32344 52.292 8.07109 52.5051 6.98697 52.9312 5.89911 53.3537 5.05051 53.9743 4.43742 54.7892 3.82807 55.6079 3.52152 56.6135 3.52152 57.8098 3.52152 58.6397 3.71592 59.3724 4.10097 60.0079 4.48975 60.6435 5.15518 61.2154 6.10098 61.7351 7.05052 62.2509 8.36642 62.7556 10.0599 63.2528L13.8207 64.3706C16.4599 65.1444 18.4039 66.1762 19.66 67.4622 20.9123 68.7519 21.5404 70.4417 21.5404 72.5239 21.5404 74.2585 21.1217 75.7838 20.2843 77.0959 19.4431 78.4118 18.2057 79.4361 16.5758 80.1726 14.9422 80.909 12.9534 81.2754 10.6057 81.2754Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M64.1912 81.2754C61.9332 81.2754 59.8322 80.8717 57.8808 80.0604 55.9369 79.253 54.2397 78.124 52.7967 76.681 51.3499 75.238 50.2322 73.5445 49.4284 71.608 48.6284 69.6678 48.2247 67.5706 48.2247 65.3089 48.2247 63.0472 48.6247 60.9238 49.4284 58.9874 50.2284 57.0472 51.3499 55.3574 52.7967 53.9144 54.2397 52.4714 55.9331 51.3499 57.8808 50.5462 59.8285 49.7462 61.9332 49.3424 64.1912 49.3424 66.4491 49.3424 68.5276 49.7499 70.4716 50.5686 72.4118 51.3836 74.1015 52.52 75.5445 53.978 76.9875 55.4359 78.1128 57.1332 78.924 59.0659 79.7352 60.9986 80.1389 63.0771 80.1389 65.3089 80.1389 67.5407 79.7352 69.6678 78.924 71.608 78.1165 73.5482 76.9875 75.238 75.5445 76.681 74.1015 78.124 72.408 79.2492 70.4716 80.0604 68.5314 80.8717 66.4416 81.2754 64.1912 81.2754ZM64.1912 78.1053C65.9257 78.1053 67.5519 77.8025 69.0697 77.1969 70.5837 76.5912 71.9108 75.724 73.0473 74.595 74.1838 73.466 75.0735 72.1164 75.7165 70.5501 76.3557 68.9837 76.681 67.2379 76.681 65.3127 76.681 62.7481 76.124 60.5051 75.0099 58.5874 73.8922 56.6733 72.3893 55.1817 70.5052 54.1163 68.6174 53.0509 66.5127 52.52 64.1949 52.52 62.4603 52.52 60.8379 52.8228 59.3201 53.4285 57.8061 54.0341 56.4789 54.9051 55.3425 56.0303 54.206 57.1593 53.3126 58.5089 52.6621 60.064 52.0154 61.6266 51.6901 63.3762 51.6901 65.3164 51.6901 67.8809 52.2509 70.1239 53.3761 72.0417 54.4976 73.9557 56.0004 75.4473 57.892 76.5127 59.7799 77.5782 61.8846 78.109 64.2024 78.109Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M109.261 81.2006 109.261 49.2415 116.109 49.2415 116.109 60.6547 127.522 60.6547 127.522 49.2415 134.371 49.2415 134.371 81.2006 127.522 81.2006 127.522 67.5033 116.109 67.5033 116.109 81.2006 109.261 81.2006Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M178.072 81.2754C175.725 81.2754 173.553 80.8717 171.556 80.0604 169.56 79.253 167.826 78.124 166.36 76.681 164.895 75.238 163.758 73.5445 162.951 71.608 162.14 69.6678 161.736 67.5706 161.736 65.3089 161.736 63.0472 162.14 60.9238 162.951 58.9874 163.758 57.0472 164.895 55.3574 166.36 53.9144 167.826 52.4714 169.556 51.3499 171.556 50.5462 173.553 49.7462 175.725 49.3424 178.072 49.3424 180.42 49.3424 182.592 49.7499 184.577 50.5686 186.57 51.3836 188.301 52.52 189.773 53.978 191.246 55.4359 192.39 57.1332 193.198 59.0659 194.005 60.9986 194.409 63.0771 194.409 65.3089 194.409 67.5407 194.005 69.6678 193.198 71.608 192.39 73.5482 191.246 75.238 189.773 76.681 188.301 78.124 186.57 79.2492 184.577 80.0604 182.588 80.8717 180.42 81.2754 178.072 81.2754ZM178.072 74.4492C179.328 74.4492 180.487 74.2398 181.553 73.8137 182.614 73.3912 183.542 72.7781 184.33 71.9781 185.115 71.1781 185.729 70.2099 186.158 69.0809 186.585 67.9519 186.801 66.6921 186.801 65.3089 186.801 63.4547 186.424 61.8472 185.665 60.4752 184.906 59.1033 183.871 58.0453 182.558 57.2902 181.243 56.5425 179.747 56.1649 178.072 56.1649 176.82 56.1649 175.661 56.3743 174.596 56.8004 173.53 57.2229 172.607 57.836 171.829 58.636 171.048 59.436 170.439 60.4005 170.001 61.522 169.564 62.6472 169.343 63.907 169.343 65.3089 169.343 67.1594 169.725 68.7706 170.484 70.1426 171.239 71.5146 172.278 72.5725 173.598 73.3239 174.917 74.0753 176.409 74.4492 178.069 74.4492Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M221.112 81.2006 221.112 51.5256 228.192 51.5256 239.994 69.7875 237.067 69.8099 248.297 51.5256 255.352 51.5256 255.352 81.2006 248.503 81.2006 248.503 59.2752 249.718 59.7537 240.88 74.352 236.047 74.352 226.858 59.7537 227.953 59.2752 227.953 81.2006 221.105 81.2006Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M282.742 81.2006 282.742 49.2415 305.569 49.2415 305.569 56.0902 291.871 56.0902 291.871 60.6547 303.285 60.6547 303.285 67.5033 291.871 67.5033 291.871 74.352 305.569 74.352 305.569 81.2006 282.742 81.2006Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M100.595 17.5441C99.2568 17.5441 98.0195 17.3385 96.883 16.931 95.7465 16.5235 94.7484 15.9366 93.896 15.1702 93.0437 14.4038 92.3783 13.4842 91.9073 12.4113 91.4362 11.3384 91.197 10.1309 91.197 8.79259 91.197 7.45426 91.425 6.25799 91.8811 5.18135 92.3372 4.1047 92.9764 3.17759 93.7989 2.40376 94.6213 1.62992 95.5858 1.03552 96.6961 0.620566 97.8064 0.205609 99.0176-0.00373835 100.33-0.00373835 100.939-0.00373835 101.556 0.0448602 102.18 0.142057 102.805 0.239254 103.421 0.400003 104.023 0.624304 104.625 0.848605 105.205 1.14767 105.747 1.52525L104.569 3.64115C103.96 3.24862 103.302 2.95703 102.591 2.76264 101.881 2.57198 101.152 2.47479 100.397 2.47479 99.4176 2.47479 98.5353 2.62058 97.7428 2.91217 96.9503 3.20376 96.2736 3.6262 95.7129 4.17573 95.1521 4.72527 94.7222 5.38696 94.4194 6.16453 94.1204 6.94211 93.9671 7.82062 93.9671 8.79633 93.9671 10.1496 94.2549 11.3048 94.8306 12.258 95.4063 13.2113 96.2026 13.9328 97.2157 14.4263 98.2288 14.9197 99.3952 15.1665 100.719 15.1665 101.369 15.1665 101.952 15.1029 102.472 14.9796 102.991 14.8562 103.414 14.7141 103.735 14.5534L103.735 10.4898 99.9148 10.4898 99.9148 8.25427 106.15 8.25427 106.15 16.1123C105.709 16.4076 105.16 16.6656 104.498 16.8824 103.836 17.0992 103.156 17.2637 102.457 17.3758 101.754 17.488 101.133 17.5441 100.588 17.5441Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M119.904 17.1852 119.904 0.358881 126.263 0.358881C127.433 0.358881 128.442 0.560752 129.298 0.964493 130.151 1.36823 130.812 1.94394 131.28 2.68787 131.747 3.4318 131.982 4.31779 131.982 5.3421 131.982 6.17575 131.803 6.9122 131.448 7.5552 131.093 8.19446 130.592 8.72156 129.952 9.13652 129.313 9.54774 128.569 9.83185 127.728 9.98512L132.801 17.1852 129.545 17.1852 124.894 10.4076 122.599 10.4076 122.599 17.1852 119.907 17.1852ZM122.599 8.16081 125.822 8.16081C126.909 8.16081 127.758 7.92903 128.364 7.46548 128.969 7.00192 129.272 6.3365 129.272 5.4692 129.272 4.6019 128.999 3.88788 128.453 3.39442 127.908 2.90096 127.096 2.65423 126.012 2.65423L122.599 2.65423 122.599 8.15707Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M152.184 17.5441C150.685 17.5441 149.433 17.2413 148.424 16.6319 147.414 16.0226 146.655 15.1964 146.147 14.1496 145.639 13.1029 145.384 11.9291 145.384 10.6206L145.384 0.358881 148.087 0.358881 148.087 10.5982C148.087 12.0786 148.457 13.1851 149.194 13.9104 149.93 14.6356 150.928 14.9982 152.184 14.9982 153.44 14.9982 154.439 14.6356 155.175 13.9104 155.911 13.1851 156.282 12.0823 156.282 10.5982L156.282 0.358881 158.984 0.358881 158.984 10.6206C158.984 11.9178 158.73 13.0917 158.222 14.1347 157.713 15.1814 156.954 16.0076 155.949 16.6207 154.943 17.2338 153.687 17.5403 152.181 17.5403Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M172.88 17.1852 172.88 0.358881 178.973 0.358881C180.166 0.358881 181.224 0.56449 182.14 0.979447 183.056 1.39066 183.777 1.98506 184.297 2.7589 184.816 3.53274 185.078 4.46359 185.078 5.55145 185.078 6.6393 184.839 7.59258 184.357 8.35894 183.874 9.1253 183.175 9.70849 182.259 10.1085 181.343 10.5085 180.226 10.7104 178.914 10.7104L175.571 10.7104 175.571 17.1889 172.88 17.1889ZM175.571 8.38885 178.947 8.38885C180.035 8.38885 180.884 8.16081 181.482 7.70473 182.084 7.24865 182.383 6.54585 182.383 5.60004 182.383 4.65424 182.072 3.95891 181.459 3.46545 180.843 2.97199 180.013 2.72525 178.973 2.72525L175.571 2.72525 175.571 8.38511Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M205.531 17.5441C204.263 17.5441 203.093 17.3235 202.017 16.8786 200.94 16.4338 199.998 15.8169 199.198 15.0207 198.398 14.2281 197.777 13.2973 197.336 12.2319 196.895 11.1664 196.674 10.0113 196.674 8.77016 196.674 7.52903 196.895 6.36267 197.336 5.29724 197.777 4.23181 198.398 3.30096 199.198 2.50843 199.998 1.7159 200.94 1.09907 202.017 0.657949 203.093 0.216824 204.267-0.00373835 205.531-0.00373835 206.794-0.00373835 207.953 0.220562 209.026 0.669164 210.099 1.11777 211.037 1.74207 211.837 2.54208 212.637 3.34208 213.261 4.27293 213.706 5.33462 214.151 6.39631 214.372 7.54025 214.372 8.76642 214.372 9.9926 214.151 11.1627 213.706 12.2281 213.261 13.2936 212.637 14.2244 211.837 15.0169 211.037 15.8095 210.099 16.43 209.026 16.8749 207.953 17.3198 206.787 17.5403 205.531 17.5403ZM205.531 14.9982C206.379 14.9982 207.172 14.8525 207.904 14.5609 208.637 14.2693 209.276 13.8468 209.822 13.2973 210.368 12.7478 210.794 12.0898 211.101 11.3272 211.411 10.5608 211.564 9.71222 211.564 8.7739 211.564 7.51782 211.299 6.41874 210.764 5.48789 210.23 4.55331 209.508 3.83181 208.596 3.31965 207.684 2.8075 206.66 2.54955 205.531 2.54955 204.682 2.54955 203.889 2.69535 203.157 2.98694 202.424 3.27853 201.781 3.70096 201.235 4.2505 200.686 4.80004 200.256 5.45425 199.949 6.21687 199.639 6.97949 199.486 7.83184 199.486 8.77764 199.486 10.0337 199.755 11.1328 200.289 12.0636 200.828 12.9982 201.549 13.7197 202.458 14.2319 203.366 14.744 204.39 15.002 205.527 15.002Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/></g></svg><span style="color:rgba(255,255,241,.4);font-size:13px;border-left:1px solid rgba(255,255,241,.18);padding-left:14px">Solicitação de Antecipação</span></div>
-  <span id="header-prot" style="font-size:12px;opacity:.65"></span>
-</div>
-
-<div class="progress-bar">
-  <div class="steps">
-    <div class="step active" id="step1"><div class="step-circle">1</div><div class="step-label">Solicitação</div></div>
-    <div class="step" id="step2"><div class="step-circle">2</div><div class="step-label">Confirmação</div></div>
+<div class="header">
+  <div style="display:flex;align-items:center;gap:14px"><svg viewBox="487 319 306 82" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" overflow="hidden" style="height:42px;width:auto;display:block"><defs><clipPath id="clip0"><rect x="487" y="319" width="306" height="82"/></clipPath></defs><g clip-path="url(#clip0)" transform="translate(-487 -319)"><path d="M10.6057 81.2754C8.62437 81.2754 6.68416 80.9988 4.78882 80.453 2.89348 79.9072 1.29721 79.1146-0.00373835 78.0791L1.72338 75.4324C2.49722 76.0417 3.36077 76.5576 4.31779 76.9838 5.27107 77.4062 6.2879 77.7277 7.35707 77.9483 8.42997 78.1688 9.52531 78.2772 10.6505 78.2772 12.9833 78.2772 14.8562 77.8137 16.2693 76.8866 17.6861 75.9595 18.3927 74.6024 18.3927 72.808 18.3927 71.5108 17.9254 70.408 16.9945 69.5071 16.0599 68.6024 14.3253 67.78 11.7907 67.036L8.29165 66.008C5.56266 65.208 3.56638 64.165 2.29908 62.879 1.03178 61.5967 0.396265 59.9706 0.396265 58.0042 0.396265 56.6771 0.657949 55.4808 1.18506 54.4154 1.70842 53.3499 2.44862 52.4415 3.4019 51.6826 4.35891 50.9238 5.49163 50.3443 6.80379 49.9443 8.11969 49.5443 9.55895 49.3424 11.1328 49.3424 13.0281 49.3424 14.7852 49.6191 16.4039 50.1724 18.0226 50.7294 19.3759 51.4546 20.4712 52.3593L18.6768 54.8976C18.0076 54.3556 17.245 53.8883 16.3927 53.4995 15.5366 53.107 14.6319 52.8079 13.6674 52.6023 12.7029 52.4004 11.7272 52.292 10.7365 52.292 9.32344 52.292 8.07109 52.5051 6.98697 52.9312 5.89911 53.3537 5.05051 53.9743 4.43742 54.7892 3.82807 55.6079 3.52152 56.6135 3.52152 57.8098 3.52152 58.6397 3.71592 59.3724 4.10097 60.0079 4.48975 60.6435 5.15518 61.2154 6.10098 61.7351 7.05052 62.2509 8.36642 62.7556 10.0599 63.2528L13.8207 64.3706C16.4599 65.1444 18.4039 66.1762 19.66 67.4622 20.9123 68.7519 21.5404 70.4417 21.5404 72.5239 21.5404 74.2585 21.1217 75.7838 20.2843 77.0959 19.4431 78.4118 18.2057 79.4361 16.5758 80.1726 14.9422 80.909 12.9534 81.2754 10.6057 81.2754Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M64.1912 81.2754C61.9332 81.2754 59.8322 80.8717 57.8808 80.0604 55.9369 79.253 54.2397 78.124 52.7967 76.681 51.3499 75.238 50.2322 73.5445 49.4284 71.608 48.6284 69.6678 48.2247 67.5706 48.2247 65.3089 48.2247 63.0472 48.6247 60.9238 49.4284 58.9874 50.2284 57.0472 51.3499 55.3574 52.7967 53.9144 54.2397 52.4714 55.9331 51.3499 57.8808 50.5462 59.8285 49.7462 61.9332 49.3424 64.1912 49.3424 66.4491 49.3424 68.5276 49.7499 70.4716 50.5686 72.4118 51.3836 74.1015 52.52 75.5445 53.978 76.9875 55.4359 78.1128 57.1332 78.924 59.0659 79.7352 60.9986 80.1389 63.0771 80.1389 65.3089 80.1389 67.5407 79.7352 69.6678 78.924 71.608 78.1165 73.5482 76.9875 75.238 75.5445 76.681 74.1015 78.124 72.408 79.2492 70.4716 80.0604 68.5314 80.8717 66.4416 81.2754 64.1912 81.2754ZM64.1912 78.1053C65.9257 78.1053 67.5519 77.8025 69.0697 77.1969 70.5837 76.5912 71.9108 75.724 73.0473 74.595 74.1838 73.466 75.0735 72.1164 75.7165 70.5501 76.3557 68.9837 76.681 67.2379 76.681 65.3127 76.681 62.7481 76.124 60.5051 75.0099 58.5874 73.8922 56.6733 72.3893 55.1817 70.5052 54.1163 68.6174 53.0509 66.5127 52.52 64.1949 52.52 62.4603 52.52 60.8379 52.8228 59.3201 53.4285 57.8061 54.0341 56.4789 54.9051 55.3425 56.0303 54.206 57.1593 53.3126 58.5089 52.6621 60.064 52.0154 61.6266 51.6901 63.3762 51.6901 65.3164 51.6901 67.8809 52.2509 70.1239 53.3761 72.0417 54.4976 73.9557 56.0004 75.4473 57.892 76.5127 59.7799 77.5782 61.8846 78.109 64.2024 78.109Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M109.261 81.2006 109.261 49.2415 116.109 49.2415 116.109 60.6547 127.522 60.6547 127.522 49.2415 134.371 49.2415 134.371 81.2006 127.522 81.2006 127.522 67.5033 116.109 67.5033 116.109 81.2006 109.261 81.2006Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M178.072 81.2754C175.725 81.2754 173.553 80.8717 171.556 80.0604 169.56 79.253 167.826 78.124 166.36 76.681 164.895 75.238 163.758 73.5445 162.951 71.608 162.14 69.6678 161.736 67.5706 161.736 65.3089 161.736 63.0472 162.14 60.9238 162.951 58.9874 163.758 57.0472 164.895 55.3574 166.36 53.9144 167.826 52.4714 169.556 51.3499 171.556 50.5462 173.553 49.7462 175.725 49.3424 178.072 49.3424 180.42 49.3424 182.592 49.7499 184.577 50.5686 186.57 51.3836 188.301 52.52 189.773 53.978 191.246 55.4359 192.39 57.1332 193.198 59.0659 194.005 60.9986 194.409 63.0771 194.409 65.3089 194.409 67.5407 194.005 69.6678 193.198 71.608 192.39 73.5482 191.246 75.238 189.773 76.681 188.301 78.124 186.57 79.2492 184.577 80.0604 182.588 80.8717 180.42 81.2754 178.072 81.2754ZM178.072 74.4492C179.328 74.4492 180.487 74.2398 181.553 73.8137 182.614 73.3912 183.542 72.7781 184.33 71.9781 185.115 71.1781 185.729 70.2099 186.158 69.0809 186.585 67.9519 186.801 66.6921 186.801 65.3089 186.801 63.4547 186.424 61.8472 185.665 60.4752 184.906 59.1033 183.871 58.0453 182.558 57.2902 181.243 56.5425 179.747 56.1649 178.072 56.1649 176.82 56.1649 175.661 56.3743 174.596 56.8004 173.53 57.2229 172.607 57.836 171.829 58.636 171.048 59.436 170.439 60.4005 170.001 61.522 169.564 62.6472 169.343 63.907 169.343 65.3089 169.343 67.1594 169.725 68.7706 170.484 70.1426 171.239 71.5146 172.278 72.5725 173.598 73.3239 174.917 74.0753 176.409 74.4492 178.069 74.4492Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M221.112 81.2006 221.112 51.5256 228.192 51.5256 239.994 69.7875 237.067 69.8099 248.297 51.5256 255.352 51.5256 255.352 81.2006 248.503 81.2006 248.503 59.2752 249.718 59.7537 240.88 74.352 236.047 74.352 226.858 59.7537 227.953 59.2752 227.953 81.2006 221.105 81.2006Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M282.742 81.2006 282.742 49.2415 305.569 49.2415 305.569 56.0902 291.871 56.0902 291.871 60.6547 303.285 60.6547 303.285 67.5033 291.871 67.5033 291.871 74.352 305.569 74.352 305.569 81.2006 282.742 81.2006Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M100.595 17.5441C99.2568 17.5441 98.0195 17.3385 96.883 16.931 95.7465 16.5235 94.7484 15.9366 93.896 15.1702 93.0437 14.4038 92.3783 13.4842 91.9073 12.4113 91.4362 11.3384 91.197 10.1309 91.197 8.79259 91.197 7.45426 91.425 6.25799 91.8811 5.18135 92.3372 4.1047 92.9764 3.17759 93.7989 2.40376 94.6213 1.62992 95.5858 1.03552 96.6961 0.620566 97.8064 0.205609 99.0176-0.00373835 100.33-0.00373835 100.939-0.00373835 101.556 0.0448602 102.18 0.142057 102.805 0.239254 103.421 0.400003 104.023 0.624304 104.625 0.848605 105.205 1.14767 105.747 1.52525L104.569 3.64115C103.96 3.24862 103.302 2.95703 102.591 2.76264 101.881 2.57198 101.152 2.47479 100.397 2.47479 99.4176 2.47479 98.5353 2.62058 97.7428 2.91217 96.9503 3.20376 96.2736 3.6262 95.7129 4.17573 95.1521 4.72527 94.7222 5.38696 94.4194 6.16453 94.1204 6.94211 93.9671 7.82062 93.9671 8.79633 93.9671 10.1496 94.2549 11.3048 94.8306 12.258 95.4063 13.2113 96.2026 13.9328 97.2157 14.4263 98.2288 14.9197 99.3952 15.1665 100.719 15.1665 101.369 15.1665 101.952 15.1029 102.472 14.9796 102.991 14.8562 103.414 14.7141 103.735 14.5534L103.735 10.4898 99.9148 10.4898 99.9148 8.25427 106.15 8.25427 106.15 16.1123C105.709 16.4076 105.16 16.6656 104.498 16.8824 103.836 17.0992 103.156 17.2637 102.457 17.3758 101.754 17.488 101.133 17.5441 100.588 17.5441Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M119.904 17.1852 119.904 0.358881 126.263 0.358881C127.433 0.358881 128.442 0.560752 129.298 0.964493 130.151 1.36823 130.812 1.94394 131.28 2.68787 131.747 3.4318 131.982 4.31779 131.982 5.3421 131.982 6.17575 131.803 6.9122 131.448 7.5552 131.093 8.19446 130.592 8.72156 129.952 9.13652 129.313 9.54774 128.569 9.83185 127.728 9.98512L132.801 17.1852 129.545 17.1852 124.894 10.4076 122.599 10.4076 122.599 17.1852 119.907 17.1852ZM122.599 8.16081 125.822 8.16081C126.909 8.16081 127.758 7.92903 128.364 7.46548 128.969 7.00192 129.272 6.3365 129.272 5.4692 129.272 4.6019 128.999 3.88788 128.453 3.39442 127.908 2.90096 127.096 2.65423 126.012 2.65423L122.599 2.65423 122.599 8.15707Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M152.184 17.5441C150.685 17.5441 149.433 17.2413 148.424 16.6319 147.414 16.0226 146.655 15.1964 146.147 14.1496 145.639 13.1029 145.384 11.9291 145.384 10.6206L145.384 0.358881 148.087 0.358881 148.087 10.5982C148.087 12.0786 148.457 13.1851 149.194 13.9104 149.93 14.6356 150.928 14.9982 152.184 14.9982 153.44 14.9982 154.439 14.6356 155.175 13.9104 155.911 13.1851 156.282 12.0823 156.282 10.5982L156.282 0.358881 158.984 0.358881 158.984 10.6206C158.984 11.9178 158.73 13.0917 158.222 14.1347 157.713 15.1814 156.954 16.0076 155.949 16.6207 154.943 17.2338 153.687 17.5403 152.181 17.5403Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M172.88 17.1852 172.88 0.358881 178.973 0.358881C180.166 0.358881 181.224 0.56449 182.14 0.979447 183.056 1.39066 183.777 1.98506 184.297 2.7589 184.816 3.53274 185.078 4.46359 185.078 5.55145 185.078 6.6393 184.839 7.59258 184.357 8.35894 183.874 9.1253 183.175 9.70849 182.259 10.1085 181.343 10.5085 180.226 10.7104 178.914 10.7104L175.571 10.7104 175.571 17.1889 172.88 17.1889ZM175.571 8.38885 178.947 8.38885C180.035 8.38885 180.884 8.16081 181.482 7.70473 182.084 7.24865 182.383 6.54585 182.383 5.60004 182.383 4.65424 182.072 3.95891 181.459 3.46545 180.843 2.97199 180.013 2.72525 178.973 2.72525L175.571 2.72525 175.571 8.38511Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/><path d="M205.531 17.5441C204.263 17.5441 203.093 17.3235 202.017 16.8786 200.94 16.4338 199.998 15.8169 199.198 15.0207 198.398 14.2281 197.777 13.2973 197.336 12.2319 196.895 11.1664 196.674 10.0113 196.674 8.77016 196.674 7.52903 196.895 6.36267 197.336 5.29724 197.777 4.23181 198.398 3.30096 199.198 2.50843 199.998 1.7159 200.94 1.09907 202.017 0.657949 203.093 0.216824 204.267-0.00373835 205.531-0.00373835 206.794-0.00373835 207.953 0.220562 209.026 0.669164 210.099 1.11777 211.037 1.74207 211.837 2.54208 212.637 3.34208 213.261 4.27293 213.706 5.33462 214.151 6.39631 214.372 7.54025 214.372 8.76642 214.372 9.9926 214.151 11.1627 213.706 12.2281 213.261 13.2936 212.637 14.2244 211.837 15.0169 211.037 15.8095 210.099 16.43 209.026 16.8749 207.953 17.3198 206.787 17.5403 205.531 17.5403ZM205.531 14.9982C206.379 14.9982 207.172 14.8525 207.904 14.5609 208.637 14.2693 209.276 13.8468 209.822 13.2973 210.368 12.7478 210.794 12.0898 211.101 11.3272 211.411 10.5608 211.564 9.71222 211.564 8.7739 211.564 7.51782 211.299 6.41874 210.764 5.48789 210.23 4.55331 209.508 3.83181 208.596 3.31965 207.684 2.8075 206.66 2.54955 205.531 2.54955 204.682 2.54955 203.889 2.69535 203.157 2.98694 202.424 3.27853 201.781 3.70096 201.235 4.2505 200.686 4.80004 200.256 5.45425 199.949 6.21687 199.639 6.97949 199.486 7.83184 199.486 8.77764 199.486 10.0337 199.755 11.1328 200.289 12.0636 200.828 12.9982 201.549 13.7197 202.458 14.2319 203.366 14.744 204.39 15.002 205.527 15.002Z" fill="#FFFAF3" transform="matrix(1 0 0 1.00892 487.216 319)"/></g></svg><span style="color:rgba(255,255,241,.4);font-size:13px;border-left:1px solid rgba(255,255,241,.18);padding-left:14px">Acompanhamento de Antecipações</span></div>
+  <div class="header-right">
+    <span class="live-label"><span class="live-dot"></span>Tempo real</span>
+    <span id="modo-badge" style="font-size:11px;padding:3px 10px;border-radius:10px;font-weight:600;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25)"></span>
+    <input class="search-box" id="search" placeholder="Buscar protocolo, representante ou pedido..." oninput="renderBoard()" />
+    <select class="filter-sel" id="filter-urg" onchange="renderBoard()">
+      <option value="">Todas urgências</option>
+      <option>Alta</option>
+      <option>Média</option>
+      <option>Baixa</option>
+    </select>
+    <button class="btn-refresh" onclick="carregarDados()">↻ Atualizar</button>
   </div>
 </div>
 
-<div class="container">
-
-  <!-- PAINEL 1 — FORMULÁRIO -->
-  <div class="panel active" id="panel-form">
-
-    <div class="card">
-      <div class="card-header">1. Identificação do solicitante</div>
-      <div class="card-body">
-        <div class="field">
-          <label>Representante <span class="req">*</span></label>
-          <select id="f-nome" style="max-width:480px">
-            <option value="">Selecionar representante...</option>
-            <option>A Z REPRESENTACOES LTDA</option>
-            <option>A.J.P. REPRESENTACOES LTDA</option>
-            <option>ANDERSON PIRES BARBOZA</option>
-            <option>ANTONIO EDUARDO LUCIANO NOGUEIRA</option>
-            <option>DANIELA DE BARROS AMORIM REPRESENTAÇÕES</option>
-            <option>EDUARDO TADEU MONZON</option>
-            <option>EXPORTACAO - DIRETO</option>
-            <option>GABRIELA SIQUEIRA VIEIRA</option>
-            <option>GOMES E JATENE COMERCIO E REPRESENTACAO LTDA</option>
-            <option>GRUPO SOHOME LTDA</option>
-            <option>GUSTAVO LUIS SCOLA</option>
-            <option>IAGO GABRIEL BRAGA GRIMALDI</option>
-            <option>J C GESTAO E ADMINISTRACAO DE PROPRIEDADE S/S LTDA</option>
-            <option>LSA REPRESENTACOES E SERVICOS DE TAPECARIAS LTDA - RJ</option>
-            <option>LSA REPRESENTACOES E SERVICOS DE TAPECARIAS LTDA - RJ INTERIOR</option>
-            <option>LSA REPRESENTACOES E SERVICOS DE TAPECARIAS LTDA - SP</option>
-            <option>LSA REPRESENTACOES E SERVICOS DE TAPECARIAS LTDA - SP LITORAL</option>
-            <option>M.FURLANETTO REPRESENTACOES COMERCIAIS LTDA</option>
-            <option>MANUELA QUAGIO CANOVA</option>
-            <option>NATAN SERVICOS DE REPRESENTACOES LTDA</option>
-            <option>ORI - ORIVALDO</option>
-            <option>SACCARO - DIRETO</option>
-            <option>VITOR C. JARDIM REPRESENTACOES</option>
-            <option>WASHINGTON AZEVEDO REPRESENTACOES LTDA</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-header">2. Dados gerais do pedido</div>
-      <div class="card-body">
-        <div class="field-grid">
-          <div class="field"><label>Nº do pedido <span class="req">*</span></label><input type="text" id="f-pedido" placeholder="PED-2024-00123" /></div>
-          <div class="field"><label>Data de emissão <span class="req">*</span></label><input type="date" id="f-emissao" oninput="recalcTodos()" /></div>
-        </div>
-        <div class="field-grid" style="margin-top:14px">
-          <div class="field">
-            <label>Data solicitada pelo cliente <span class="req">*</span></label>
-            <input type="date" id="f-datasol" oninput="recalcTodos()" />
-            <div class="diff-label" id="diff-label"></div>
-          </div>
-          <div class="field"><label>Observações adicionais</label><textarea id="f-obs" placeholder="Condições especiais de entrega, contato do cliente final..." maxlength="400"></textarea></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-header">
-        <span>3. Produtos solicitados <span style="color:#e24b4a;font-weight:400">*</span></span>
-        <span id="prod-count-badge" style="font-size:11px;background:var(--blue-mid);color:#fff;padding:2px 10px;border-radius:10px;display:none"></span>
-      </div>
-      <div class="card-body">
-
-        <!-- Linha de adição -->
-        <div class="add-prod-row">
-          <div class="field prod-search-wrap">
-            <label>Produto</label>
-            <input type="text" id="f-prod-busca" placeholder="Digite o nome do produto..." autocomplete="off"
-              oninput="filtrarProdutos(this.value)"
-              onfocus="mostrarDropdown()"
-              onblur="setTimeout(fecharDropdown,200)" />
-            <input type="hidden" id="f-prod-sel" />
-            <div class="prod-dropdown" id="prod-dropdown"></div>
-          </div>
-          <div class="field prod-qtd-wrap">
-            <label>Qtd</label>
-            <input type="number" id="f-prod-qtd" min="1" value="1" placeholder="1" />
-          </div>
-          <div class="field" style="justify-content:flex-end">
-            <label style="visibility:hidden">ação</label>
-            <button class="btn primary add-prod-btn" onclick="adicionarProduto()">+ Adicionar</button>
-          </div>
-        </div>
-
-        <!-- Tabela de produtos -->
-        <div class="prod-table-wrap" id="prod-table-wrap">
-          <div class="empty-state" id="prod-empty">Nenhum produto adicionado ainda. Use o campo acima para buscar e adicionar.</div>
-          <table class="prod-table" id="prod-table" style="display:none">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Produto</th>
-                <th>Prazo</th>
-                <th>Qtd</th>
-                <th>Entrega prevista</th>
-                <th>Antecip. (dias)</th>
-                <th style="text-align:center">Ações</th>
-              </tr>
-            </thead>
-            <tbody id="prod-tbody"></tbody>
-          </table>
-        </div>
-
-        <!-- Badge prazo mais longo -->
-        <div class="info-row" id="info-prazo-geral" style="display:none; margin-top:14px;">
-          <span class="badge">Prazo mais longo: <b id="prazo-max-txt">—</b> dias</span>
-          <span class="badge warn">Entrega mais tardia: <b id="entrega-max-txt">—</b></span>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-header">4. Motivo da antecipação <span style="font-weight:400;color:#e24b4a"> *</span></div>
-      <div class="card-body">
-        <div class="chip-grid">
-          <button class="chip" onclick="selMotivo(this,'Inauguração de loja/espaço')">Inauguração de loja / espaço</button>
-          <button class="chip" onclick="selMotivo(this,'Evento ou data comemorativa')">Evento ou data comemorativa</button>
-          <button class="chip" onclick="selMotivo(this,'Obra/reforma com prazo definido')">Obra / reforma com prazo definido</button>
-          <button class="chip" onclick="selMotivo(this,'Exigência contratual/licitação')">Exigência contratual / licitação</button>
-          <button class="chip" onclick="selMotivo(this,'Substituição urgente')">Substituição urgente</button>
-          <button class="chip" onclick="selMotivo(this,'Outro')">Outro motivo</button>
-        </div>
-        <div class="field" id="campo-outro" style="display:none;margin-top:12px">
-          <label>Descreva o motivo <span class="req">*</span></label>
-          <textarea id="f-outro" placeholder="Explique..." maxlength="400"></textarea>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-header">5. Urgência e impacto</div>
-      <div class="card-body">
-        <div class="field">
-          <label>Nível de urgência <span class="req">*</span></label>
-          <div class="urg-row">
-            <button class="urg-btn" onclick="selUrg(this,'Baixa')">Baixa</button>
-            <button class="urg-btn" onclick="selUrg(this,'Média')">Média</button>
-            <button class="urg-btn" onclick="selUrg(this,'Alta')">Alta</button>
-          </div>
-        </div>
-        <div class="field" style="margin-top:14px">
-          <label>Impacto caso não haja antecipação</label>
-          <textarea id="f-impacto" placeholder="Descreva o impacto comercial, operacional ou financeiro..." maxlength="400"></textarea>
-        </div>
-      </div>
-    </div>
-
-    <div class="err-box" id="err-form"></div>
-    <div class="btn-row">
-      <button class="btn" onclick="limpar()">Limpar</button>
-      <button class="btn primary" onclick="enviarForm()">Enviar solicitação →</button>
-    </div>
-    <div class="sending-overlay" id="sending-overlay">
-      <div class="spinner"></div>
-      Registrando solicitação...
-    </div>
-  </div>
-
-  <!-- PAINEL 2 — CONFIRMAÇÃO -->
-  <div class="panel" id="panel-fim">
-    <div class="prot-box">
-      <div>
-        <div class="prot-num" id="prot-display">—</div>
-        <div class="prot-label">Protocolo gerado — guarde este número para acompanhamento</div>
-      </div>
-    </div>
-    <div class="status-banner enviado">
-      <h3>Solicitação enviada com sucesso</h3>
-      <p>Os dados foram registrados. Use o número de protocolo acima para qualquer acompanhamento.</p>
-    </div>
-    <div class="card">
-      <div class="card-header">Resumo da solicitação</div>
-      <div class="card-body">
-        <table class="review-table" id="review-table-fim"></table>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header">Produtos incluídos</div>
-      <div class="card-body" id="review-produtos-fim"></div>
-    </div>
-    <div class="btn-row">
-      <button class="btn" onclick="exportarPDF()">Exportar (.pdf)</button>
-      <button class="btn primary" onclick="novaSolicitacao()">Nova solicitação</button>
-    </div>
-  </div>
-
+<!-- TABS — só exibidas em modo admin via JS -->
+<div class="tabs-bar" id="tabs-bar" style="display:none">
+  <button class="tab-btn active" onclick="mudarAba('kanban',this)">Kanban</button>
+  <button class="tab-btn" onclick="mudarAba('dashboard',this)">Dashboard</button>
 </div>
+
+<div class="stats-bar" id="stats-bar">
+  <div class="stat"><div class="stat-num" id="st-total">—</div><div class="stat-lbl">Total</div></div>
+  <div class="stat-sep"></div>
+  <div class="stat"><div class="stat-num" id="st-alta" style="color:var(--red)">—</div><div class="stat-lbl">Urgência Alta</div></div>
+  <div class="stat-sep"></div>
+  <div class="stat"><div class="stat-num" id="st-andamento" style="color:var(--amber)">—</div><div class="stat-lbl">Em andamento</div></div>
+  <div class="stat-sep"></div>
+  <div class="stat"><div class="stat-num" id="st-aprovado" style="color:var(--green)">—</div><div class="stat-lbl">Aprovados</div></div>
+  <div class="stat-sep"></div>
+  <div class="stat"><div class="stat-num" id="st-reprovado" style="color:var(--red)">—</div><div class="stat-lbl">Reprovados</div></div>
+</div>
+
+<!-- ── ABA KANBAN ── -->
+<div class="tab-panel active" id="tab-kanban">
+  <div id="loading-wrap" class="loading-wrap"><div class="spinner"></div> Carregando solicitações...</div>
+  <div class="board-wrap" id="board-wrap" style="display:none">
+    <div class="board" id="board">
+      <div class="col col-aguardando" ondragover="onDragOver(event,this)" ondrop="onDrop(event,'Aguardando análise')">
+        <div class="col-header"><span class="col-title">Aguardando análise</span><span class="col-count" id="cnt-Aguardando análise">0</span></div>
+        <div class="col-body" id="body-Aguardando análise"></div>
+      </div>
+      <div class="col col-comercial" ondragover="onDragOver(event,this)" ondrop="onDrop(event,'Em análise — Comercial')">
+        <div class="col-header"><span class="col-title">Comercial</span><span class="col-count" id="cnt-Em análise — Comercial">0</span></div>
+        <div class="col-body" id="body-Em análise — Comercial"></div>
+      </div>
+      <div class="col col-compras" ondragover="onDragOver(event,this)" ondrop="onDrop(event,'Em análise — Compras')">
+        <div class="col-header"><span class="col-title">Compras</span><span class="col-count" id="cnt-Em análise — Compras">0</span></div>
+        <div class="col-body" id="body-Em análise — Compras"></div>
+      </div>
+      <div class="col col-pcp" ondragover="onDragOver(event,this)" ondrop="onDrop(event,'Em análise — PCP')">
+        <div class="col-header"><span class="col-title">PCP</span><span class="col-count" id="cnt-Em análise — PCP">0</span></div>
+        <div class="col-body" id="body-Em análise — PCP"></div>
+      </div>
+      <div class="col col-aprovado" ondragover="onDragOver(event,this)" ondrop="onDrop(event,'Aprovado')">
+        <div class="col-header"><span class="col-title">Aprovado</span><span class="col-count" id="cnt-Aprovado">0</span></div>
+        <div class="col-body" id="body-Aprovado"></div>
+      </div>
+      <div class="col col-reprovado" ondragover="onDragOver(event,this)" ondrop="onDrop(event,'Reprovado')">
+        <div class="col-header"><span class="col-title">Reprovado</span><span class="col-count" id="cnt-Reprovado">0</span></div>
+        <div class="col-body" id="body-Reprovado"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── ABA DASHBOARD ── -->
+<div class="tab-panel" id="tab-dashboard">
+  <div class="dash-wrap">
+
+    <!-- FILTROS -->
+    <div class="dash-filters" id="dash-filters">
+      <div class="dash-filter-group">
+        <label>Representante</label>
+        <select id="df-rep">
+          <option value="">Todos</option>
+        </select>
+      </div>
+      <div class="dash-filter-group">
+        <label>Data inicial</label>
+        <input type="date" id="df-inicio" />
+      </div>
+      <div class="dash-filter-group">
+        <label>Data final</label>
+        <input type="date" id="df-fim" />
+      </div>
+      <button class="btn-dash-filter" onclick="aplicarFiltrosDash()">Aplicar filtros</button>
+      <button class="btn-dash-clear" onclick="limparFiltrosDash()">Limpar</button>
+      <span class="dash-filter-info" id="dash-filter-info" style="display:none"></span>
+    </div>
+
+    <!-- KPIs -->
+    <div class="dash-kpis">
+      <div class="kpi-card"><div class="kpi-label">Total de solicitações</div><div class="kpi-num" id="d-total" style="color:var(--blue-dark)">—</div></div>
+      <div class="kpi-card"><div class="kpi-label">Aprovados</div><div class="kpi-num" id="d-aprov" style="color:var(--green)">—</div></div>
+      <div class="kpi-card"><div class="kpi-label">Reprovados</div><div class="kpi-num" id="d-reprov" style="color:var(--red)">—</div><div class="kpi-sub" id="d-reprov-pct"></div></div>
+      <div class="kpi-card"><div class="kpi-label">Em andamento</div><div class="kpi-num" id="d-andamento" style="color:var(--amber)">—</div></div>
+      <div class="kpi-card"><div class="kpi-label">Urgência alta</div><div class="kpi-num" id="d-alta" style="color:var(--red)">—</div></div>
+      <div class="kpi-card"><div class="kpi-label">Tempo médio resolução</div><div class="kpi-num" id="d-tempo" style="color:var(--purple)">—</div><div class="kpi-sub">dias (concluídos)</div></div>
+    </div>
+
+    <div class="dash-grid">
+
+      <!-- Status -->
+      <div class="dash-card">
+        <div class="dash-card-header">Solicitações por status</div>
+        <div class="dash-card-body" id="d-status-bars"></div>
+      </div>
+
+      <!-- Urgência (donut via canvas) -->
+      <div class="dash-card">
+        <div class="dash-card-header">Distribuição por urgência</div>
+        <div class="dash-card-body">
+          <div class="donut-wrap">
+            <canvas id="donut-urg" width="140" height="140"></canvas>
+            <div class="donut-legend" id="donut-urg-legend"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="dash-grid">
+
+      <!-- Representantes -->
+      <div class="dash-card">
+        <div class="dash-card-header">Solicitações por representante</div>
+        <div class="dash-card-body" id="d-rep-bars"></div>
+      </div>
+
+      <!-- Motivos -->
+      <div class="dash-card">
+        <div class="dash-card-header">Motivos mais frequentes</div>
+        <div class="dash-card-body" id="d-motivo-bars"></div>
+      </div>
+
+    </div>
+
+    <!-- Produtos -->
+    <div class="dash-grid full">
+      <div class="dash-card">
+        <div class="dash-card-header">Produtos mais solicitados</div>
+        <div class="dash-card-body" id="d-prod-bars"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modal-bg" onclick="fecharModal(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modal-titulo">—</h3>
+      <button class="modal-close" onclick="fecharModalBtn()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-footer" id="modal-footer">
+      <button class="btn" onclick="fecharModalBtn()">Fechar</button>
+      <button class="btn primary" id="btn-salvar-modal" onclick="salvarMovimentacao()" style="display:none">Confirmar movimentação</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
 
 <script>
-// ─── ESTADO GLOBAL ────────────────────────────────────────────────────────────
-let motivoSel = null, urgSel = null, solicitacao = {};
-let listaProdutos = []; // [{nome, prazo, qtd}]
-let produtoAtual = null; // produto sendo buscado no campo
-let editandoIdx = null;  // índice da linha em edição inline
+const SB_URL = 'https://ixpvcpmwebcwjjcbssfo.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml4cHZjcG13ZWJjd2pqY2Jzc2ZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwMTI4ODQsImV4cCI6MjA5MTU4ODg4NH0.fyDz-uxM-AVK8G9lW2kjchCubifr1ySjugjp9yvKtEg';
+const SB_H  = { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' };
+const COLUNAS = ['Aguardando análise','Em análise — Comercial','Em análise — Compras','Em análise — PCP','Aprovado','Reprovado'];
+const ADMIN   = new URLSearchParams(window.location.search).get('modo') === 'admin';
 
-// ─── CATÁLOGO ─────────────────────────────────────────────────────────────────
-const PRODUTOS = {"ABACO": 45, "ACCORD": 60, "ACLIVE (MESA)": 60, "ACLIVE (POLTRONA)": 45, "ADANA": 60, "AGHATA PLUS - MTX CONHAQUE E PRETO": 45, "AGHATA PLUS - OUTROS ACABAMENTOS": 60, "AGREABLE": 45, "ALAVA": 60, "ALCALA": 60, "ALLADRO": 60, "ALMERIA - OUTROS ACABAMENTOS": 60, "ALMERIA - VENIZ JEQUITIBA NATURAL E NOZES": 45, "AME": 45, "AMELIA": 60, "ANCONA - MTX PRETO": 45, "ANCONA - OUTROS ACABAMENTOS": 60, "ANDROS - LAMINADO EBONY PRETO, WALNUT E WENGUE / SEM AP": 45, "ANDROS - OUTROS ACABAMENTOS / COM AP": 60, "ANNE": 45, "APARADOR BRAMANTE": 60, "ARAD": 60, "ASSUNCAO": 60, "ASTRO": 60, "AURIC": 60, "BANAT": 60, "BANCO ONIROS": 45, "BANCO POMME": 45, "BERAT": 45, "BILBAU": 45, "BIOMBO ESQUEL": 60, "BIOMBO TULUA": 60, "BLUMEN": 45, "BOEMI": 60, "BONHEUR": 60, "BRASS - BASE EM OUTROS ACABAMENTOS": 60, "BRASS - BASE TAPEÇADA": 45, "BUENOS AIRES": 45, "CADEIRA SUBLIME": 60, "CALIN (COM DETALHE)": 60, "CALIN (SEM DETALHE)": 45, "CAMA ARTTIS": 45, "CAMA CATALUNIA": 45, "CAMA CELLINI": 60, "CAMA EPURE": 60, "CAMA GORJ": 45, "CAMA MAUI": 45, "CAMA MEHEDINTI": 60, "PAISIBLE": 60, "CAMA OTOPENI": 45, "CAMA POMME": 45, "CAMA VERNASA": 45, "CANTABYA": 60, "CARTAGENA": 60, "CARTIER": 45, "CATALUNIA": 45, "CECILE": 60, "CHARMANT": 60, "COCON": 45, "CRES": 45, "DALI": 60, "DEL FIORE": 60, "DESIR": 45, "DESIREE": 45, "DESMOND": 60, "DEVA": 60, "DIDOT": 45, "ECLAT": 60, "EDESSA": 60, "EDIFIANTE": 60, "EILEEN": 60, "ELAN": 45, "ELLIOT": 60, "ELLIS": 45, "ELYSIAN": 60, "ESTANTE SAN CARLOS": 60, "ESTANTE SAN CRISTOBAL": 60, "FEVER": 60, "FIDDA - LAQUEADO METALIZADO CHAMPAGNE E LAMINADO NATURAL": 45, "FIDDA - OUTROS ACABAMENTOS": 60, "FIER": 45, "FLAMME": 45, "FLEURIR": 45, "FLOGE": 60, "FLORENTINE": 60, "GAUDI": 45, "GENOVA": 60, "GIORNATTA": 60, "GIORNATTA OFFICE": 60, "GIZA": 60, "GRAZ": 60, "GROOVE": 45, "GUADALAJARA": 60, "HAZEL": 60, "INTIMITE - DETALHE EM OUTROS ACABAMENTOS": 60, "INTIMITE - DETALHE TAPEÇADO": 45, "KAVAJI": 60, "LAUTREC": 60, "LIBIA - LAQUEADO METALIZADO CHAMPAGNE E LAMINADO NATURAL": 45, "LIBIA - OUTROS ACABAMENTOS": 60, "LIGURE": 60, "LINARES - MTX PRETO / SEM AP": 45, "LINARES - OUTROS ACABAMENTOS / COM AP": 60, "LITERATTO": 45, "LIZZ": 45, "MADELEINE": 60, "MALFATTI": 60, "MALIQ": 60, "MEDELIN": 60, "MESA ALEXANDRIA": 60, "MESA CHARMANT": 60, "MESA LA PAZ": 60, "MESA MONTERIA": 60, "MESA NAEVA": 60, "MESA NEW VISCAIA": 60, "MESA NICEIA": 60, "MESA ONDINA": 60, "MESA PISAC": 60, "MESA SAKAI": 60, "MESA SANTIAGO": 60, "MESA SANZIO": 60, "MESA VISCRI": 60, "SUBLIME MESA": 60, "MIRAGE": 60, "MODISTE": 45, "MONTERREY": 45, "MONTEVIDEO": 45, "MUNTENIA": 60, "NARCISO": 45, "NAVARRA": 60, "NAVY": 45, "NEA": 45, "NEW ARAGON - MTX PRETO E CONHAQUE / SEM AP": 45, "NEW ARAGON - OUTROS ACABAMENTOS / COM AP": 60, "NEW ARROYOS": 45, "NEW ASIA": 60, "NEW BEDFORD": 60, "NEW BLAKE": 45, "NEW CARUZO": 45, "NEW CHATEAU": 60, "NEW ETTORE": 45, "NEW LIVORNO": 45, "NEW MESSINA": 60, "NEW NORMANDIA": 45, "NEW ROMANO": 60, "NEW SAN LUIS": 60, "NEW VERSATO": 45, "NEW YANG": 60, "NEW ZEFIRO": 45, "NICAIA 24": 60, "NORAH": 45, "OLTENIA": 60, "ORLY": 45, "OTOPENI": 45, "PALERMO PLUS": 60, "PATOU": 60, "PITESTI 25": 45, "PLI": 60, "POMME": 45, "POSITANO": 60, "REFUGE (COM AP)": 60, "REFUGE (SEM AP)": 45, "RENASCENCE": 60, "REPOSE": 60, "RIALTO - METALIZADO CONHAQUE E CHAMPAGNE": 45, "RIALTO - OUTROS ACABAMENTOS": 60, "RIO DE JANEIRO": 60, "ROUND": 60, "SABRE": 60, "SAN ANDRES": 60, "SAN MIGUEL": 60, "SAN PIETRO": 60, "SAN SEBASTIAN": 60, "SANTA MARTA": 60, "SANTE": 60, "SAO PAULO": 45, "SAPPHIR": 60, "SERENITE - METALIZADO CAPUCCINO E CONHAQUE": 45, "SERENITE - OUTROS ACABAMENTOS": 60, "SERVIA": 45, "SEY": 60, "SOFT": 45, "SONETTO": 45, "SUBLIME": 60, "SUCRE": 45, "TARANTO - OUTROS ACABAMENTOS": 60, "TARANTO - VERNIZ NOZES, CACAU E EBANIZADO": 45, "TASSEL": 60, "TURA": 45, "UFO": 45, "URSOVA": 60, "VALEA": 60, "VERATO": 45, "VILLA LOBOS": 45, "VILLACH": 60, "VITALITE": 60, "ZIMER": 60, "ALENTO - MTX PRETO": 45, "ALENTO - OUTROS ACABAMENTOS": 60, "AMBER": 45, "ARLO": 45, "BELLE": 45, "BOLD (SEM BANDEJA)": 45, "BONOBO": 45, "COBAIN": 45, "CORSO": 45, "CROMIE": 45, "DEZZA": 45, "DOM": 45, "ELLIE - MTX PRETO E METALIZADO CAPPUCINO": 45, "ELLIE - OUTROS ACABAMENTOS": 60, "ETERIUM - SEM AP": 45, "ETERIUM - COM AP": 60, "FIUME": 45, "FLOW": 45, "GRID - MTX PRETO E METALIZADO CHUMBO": 45, "GRID - OUTROS ACABAMENTOS": 60, "HARPER": 45, "ISLA": 45, "JENNY": 45, "JOHNNY": 60, "JOPLIN": 45, "JULIAN": 45, "KIEDIS": 45, "LAGO": 45, "LEE": 45, "LIZZA": 60, "MIYA": 45, "NEW HARRY": 45, "NICKS - MTX PRETO": 45, "NICKS - OUTROS ACABAMENTOS": 60, "NIMBUS": 45, "ODISSEIA": 45, "ORBE": 45, "PASS": 45, "PERRY": 45, "POLARA": 60, "PRESLEY": 60, "QUILL": 60, "SENSE": 60, "SILLAGE": 60, "UCCELLI": 60, "WEG": 45, "ORIS": 45, "LIESEL": 45, "KLARIS": 45, "STOLZ": 60, "MANIFOLD": 45, "NUVIA": 45, "KLEE": 45, "DOMIA": 45, "TESS": 60, "SPUR": 60, "AXIS": 45, "BAUEN": 60, "SONA": 60, "WASS": 60, "LINA": 60, "MODUM": 45, "DESSAU": 45, "UMFELD": 60, "ATTO": 60, "SYSTEM": 45, "CODE": 45, "PROUVÉ": 45, "BOEMI BALANÇO": 60, "POLTRONA FLOGE": 60, "CAMA ETHER": 60, "OTTE": 45, "FINN": 45, "CAMA GRACE": 45, "IVY": 60, "LIOR": 45, "IRIS": 60, "OASI": 60, "CLIFF": 45, "CLIFF COM REVISTEIRO": 60, "LINEA": 60, "BRUNELLESCHI MESA": 50, "CLARTE": 50, "ESPOIR": 50, "EVIE": 50, "FITZ": 50, "GATSBY": 50, "HENRI": 50, "JOIE": 50, "KLIMT": 50, "MINOS MESA DE CENTRO": 50, "NOIR": 50, "NUIT": 50, "PISTACHE MESA": 50, "REINO MESA": 50, "SAMMY": 50, "SATURNIA MESA DE CENTRO": 50, "SOLEIL": 50, "SPLENDEUR BAR": 50, "SPLENDEUR BUFFET": 50, "VIE": 50, "VIE MESA": 50, "ZEST MESA": 50, "AERIS BUFFET": 50, "AMARNA ESPELHO": 50, "ARCADIA": 50, "ARCADIA  MESA DE JANTAR": 50, "ATLAS MESA DE CENTRO": 50, "AURORA MESA DE JANTAR": 50, "AVANT ESPELHO": 50, "BARCELONA MESA DE CABECEIRA": 50, "BARDOT MESA DE CENTRO": 50, "BELGA MESA DE JANTAR": 50, "BRADAN MESA DE CENTRO": 50, "BRICK MESA DE CENTRO": 50, "BRIDGE BUFFET": 50, "CALYX MESA LATERAL": 50, "CAYMAN  MESA DE CABECEIRA": 50, "COLONNA MESA LATERAL": 50, "DUNE MESA DE CENTRO": 50, "ECLIPSE MESA DE CENTRO": 50, "ETTORE ESPELHO": 50, "FLORA MESA DE JANTAR": 50, "FORTALEZA": 50, "GEM MESA DE CENTRO": 50, "HALO MESA DE CABECEIRA": 50, "KONA MESA DE JANTAR": 50, "KOVAK MESA DE JANTAR": 50, "LOUISE MESA LATERAL": 50, "MANTOVA BUFFET": 50, "MARIA MESA DE JANTAR": 50, "METRO MESA DE CENTRO": 50, "MODENA BUFFET": 50, "MONOLITH MESA DE CENTRO": 50, "MOON MESA DE CENTRO": 50, "MOSER MESA": 50, "MUSH MESA DE CENTRO": 50, "NAEVA": 50, "ORBIT MESA DE CENTRO": 50, "PARIS COMODA": 50, "PARIS MESA DE CABECEIRA (2D E 3D)": 50, "PEBBLE MESA DE CENTRO": 50, "PEBBLE MESA DE JANTAR": 50, "PETRA MESA LATERAL": 50, "PICASSO MESA DE CENTRO": 50, "PIERRE MESA LATERAL": 50, "SIENNA APARADOR": 50, "SPLENDEUR MESA CABECEIRA": 50, "STARE": 50, "TAIJIN APARADOR": 50, "TICIANO MESA": 50, "TRESSA  MESA DE CENTRO": 50, "TRESSA IM  MESA DE CENTRO": 50, "TURIN COMODA": 50, "URBAN MESA DE JANTAR": 50, "VENTURI MESA LATERAL": 50, "VIENNA MESA DE JANTAR": 50, "VOLPI MESA DE JANTAR": 50, "VOLTIGE ESPELHO": 50, "EDGE APARADOR": 50, "PARMA APARADOR": 50, "CHERI BUFFET": 50, "PARMA BUFFET": 50, "TAOS BUFFET": 50, "YOKO BUFFET": 50, "MODENA BUFFET BAR": 50, "DUO CAR BAR": 50, "PRIME MESA DE CABECEIRA": 50, "QUATTRO MESA DE CABECEIRA": 50, "SPAZIO MESA DE CABECEIRA": 50, "STARE MESA DE CABECEIRA": 50, "ST MARTIN MESA DE CABECEIRA": 50, "SUONO MESA DE CABECEIRA": 50, "TURIN MESA DE CABECEIRA": 50, "BERLIN MESA DE CENTRO": 50, "HAZEL MESA DE CENTRO": 50, "YOTT MESA DE JANTAR": 50, "BRICK MESA LATERAL": 50, "DUBAI": 50, "DUNE MESA LATERAL": 50, "HAZEL MESA LATERAL": 50, "LEAF MESA LATERAL": 50, "MINISTRAL ( I E II ) MESA LATERAL": 50, "ROMAN MESA LATERAL": 50, "TRE MESA LATERAL": 50, "BEEH MESA LATERAL": 50, "ALESSI MESA DE JANTAR": 50, "CUORE MESA DE JANTAR": 50, "MARBELLA MESA DE JANTAR": 50, "PETALA MESA DE JANTAR (PADRÃO E LOUNGE)": 50, "PICASSO MESA DE JANTAR": 50, "THAI MESA DE JANTAR": 50, "ZENITH MESA DE JANTAR": 50, "JOPLIN RACK": 50, "MARY RACK": 50};
+let dados = [], produtosMap = {}, cardAtual = null, novoStatus = null, dragProtocolo = null;
 
-// ─── HELPERS ──────────────────────────────────────────────────────────────────
-const fmtDate = d => { if (!d) return '—'; const p = d.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; };
-const gerarProtocolo = () => { const d=new Date(), z=n=>String(n).padStart(2,'0'); return 'ANT-'+d.getFullYear()+z(d.getMonth()+1)+z(d.getDate())+'-'+Math.floor(1000+Math.random()*9000); };
-const calcEntregaPrevista = (emissao, prazo) => { if(!emissao||!prazo) return ''; const d=new Date(emissao); d.setDate(d.getDate()+prazo); return d.toISOString().split('T')[0]; };
-const calcAntecipacao = (emissao, prazo, datasol) => { if(!emissao||!prazo||!datasol) return null; const prev=new Date(emissao); prev.setDate(prev.getDate()+prazo); return Math.round((prev-new Date(datasol))/86400000); };
-
-// ─── DROPDOWN DE PRODUTO ──────────────────────────────────────────────────────
-function filtrarProdutos(q) {
-  const dd = document.getElementById('prod-dropdown');
-  const termo = q.trim().toUpperCase();
-  if (!termo) { dd.style.display='none'; return; }
-  const matches = Object.keys(PRODUTOS).filter(k => k.toUpperCase().includes(termo)).slice(0,30);
-  if (!matches.length) {
-    dd.innerHTML='<div style="padding:10px 12px;font-size:12px;color:#888">Nenhum produto encontrado</div>';
-    dd.style.display='block'; return;
-  }
-  dd.innerHTML = matches.map(k => {
-    const cls = PRODUTOS[k]===45?'prazo-45':PRODUTOS[k]===50?'prazo-50':'prazo-60';
-    return `<div class="prod-option" onclick="selecionarProduto('${k.replace(/'/g,"\\'")}')">`+
-      `<span>${k}</span><span class="prod-option-prazo ${cls}">${PRODUTOS[k]} dias</span></div>`;
-  }).join('');
-  dd.style.display='block';
+// ── ABAS ──────────────────────────────────────────────────────────────────────
+function mudarAba(aba, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-'+aba).classList.add('active');
+  btn.classList.add('active');
+  if (aba === 'dashboard') renderDashboard();
 }
 
-function selecionarProduto(nome) {
-  document.getElementById('f-prod-busca').value = nome;
-  document.getElementById('f-prod-sel').value = nome;
-  produtoAtual = { nome, prazo: PRODUTOS[nome] };
-  document.getElementById('prod-dropdown').style.display='none';
-}
-
-function mostrarDropdown() {
-  const q = document.getElementById('f-prod-busca').value.trim();
-  if (q) filtrarProdutos(q);
-}
-
-function fecharDropdown() {
-  document.getElementById('prod-dropdown').style.display='none';
-  if (!produtoAtual || document.getElementById('f-prod-busca').value !== produtoAtual.nome) {
-    document.getElementById('f-prod-sel').value='';
-    produtoAtual=null;
+// ── CARREGAR DADOS ────────────────────────────────────────────────────────────
+async function carregarDados() {
+  try {
+    const [resSol, resProd] = await Promise.all([
+      fetch(SB_URL + '/rest/v1/solicitacoes?select=*&order=created_at.desc', { headers: SB_H }),
+      fetch(SB_URL + '/rest/v1/solicitacao_produtos?select=*', { headers: SB_H })
+    ]);
+    dados = await resSol.json();
+    const prods = await resProd.json();
+    produtosMap = {};
+    prods.forEach(p => { if (!produtosMap[p.protocolo]) produtosMap[p.protocolo] = []; produtosMap[p.protocolo].push(p); });
+    document.getElementById('loading-wrap').style.display = 'none';
+    document.getElementById('board-wrap').style.display   = 'block';
+    renderBoard();
+    if (document.getElementById('tab-dashboard').classList.contains('active')) renderDashboard();
+  } catch(e) {
+    document.getElementById('loading-wrap').innerHTML = '<span style="color:#A32D2D">Erro ao carregar dados.</span>';
   }
 }
 
-// ─── GERENCIAR LISTA DE PRODUTOS ──────────────────────────────────────────────
-function adicionarProduto() {
-  if (!produtoAtual) { alert('Selecione um produto da lista antes de adicionar.'); return; }
-  const qtd = parseInt(document.getElementById('f-prod-qtd').value) || 1;
-  listaProdutos.push({ nome: produtoAtual.nome, prazo: produtoAtual.prazo, qtd });
-  produtoAtual = null;
-  document.getElementById('f-prod-busca').value='';
-  document.getElementById('f-prod-sel').value='';
-  document.getElementById('f-prod-qtd').value=1;
-  renderTabelaProdutos();
-}
-
-function removerProduto(idx) {
-  listaProdutos.splice(idx,1);
-  renderTabelaProdutos();
-}
-
-function editarProduto(idx) {
-  editandoIdx = idx;
-  renderTabelaProdutos();
-}
-
-function salvarEdicao(idx) {
-  const nomeInput = document.getElementById(`edit-nome-${idx}`).value.trim().toUpperCase();
-  const qtdInput  = parseInt(document.getElementById(`edit-qtd-${idx}`).value) || 1;
-  const novoPrazo = PRODUTOS[nomeInput];
-  if (!novoPrazo) { alert('Produto não encontrado no catálogo. Verifique o nome.'); return; }
-  listaProdutos[idx] = { nome: nomeInput, prazo: novoPrazo, qtd: qtdInput };
-  editandoIdx = null;
-  renderTabelaProdutos();
-}
-
-function cancelarEdicao() {
-  editandoIdx = null;
-  renderTabelaProdutos();
-}
-
-function renderTabelaProdutos() {
-  const emissao  = document.getElementById('f-emissao').value;
-  const datasol  = document.getElementById('f-datasol').value;
-  const tbody    = document.getElementById('prod-tbody');
-  const tabela   = document.getElementById('prod-table');
-  const empty    = document.getElementById('prod-empty');
-  const badge    = document.getElementById('prod-count-badge');
-  const infoGeral = document.getElementById('info-prazo-geral');
-
-  if (listaProdutos.length === 0) {
-    tabela.style.display='none'; empty.style.display='block';
-    badge.style.display='none'; infoGeral.style.display='none';
-    atualizarDiffLabel();
-    return;
-  }
-
-  tabela.style.display='table'; empty.style.display='none';
-  badge.textContent = listaProdutos.length + (listaProdutos.length===1?' produto':' produtos');
-  badge.style.display='inline-block';
-
-  tbody.innerHTML = listaProdutos.map((p, i) => {
-    const prev  = calcEntregaPrevista(emissao, p.prazo);
-    const antec = calcAntecipacao(emissao, p.prazo, datasol);
-    const prazoClass = p.prazo===45?'prazo-45':p.prazo===50?'prazo-50':'prazo-60';
-    const antecTxt = antec===null ? '—' : antec>0 ? `<span style="color:var(--amber);font-weight:600">${antec}d</span>` : `<span style="color:#aaa">${antec}d</span>`;
-
-    if (editandoIdx === i) {
-      return `<tr>
-        <td style="color:#aaa">${i+1}</td>
-        <td><input id="edit-nome-${i}" value="${p.nome}" style="width:100%;font-size:12px" /></td>
-        <td><span class="prazo-pill ${prazoClass}">${p.prazo}d</span></td>
-        <td><input id="edit-qtd-${i}" type="number" min="1" value="${p.qtd}" style="width:56px;font-size:12px" /></td>
-        <td style="color:#aaa;font-size:12px">${fmtDate(prev)}</td>
-        <td>${antecTxt}</td>
-        <td><div class="td-actions">
-          <button class="icon-btn edit" onclick="salvarEdicao(${i})" title="Salvar">✓</button>
-          <button class="icon-btn" onclick="cancelarEdicao()" title="Cancelar">✕</button>
-        </div></td>
-      </tr>`;
-    }
-
-    return `<tr>
-      <td style="color:#aaa;font-size:12px">${i+1}</td>
-      <td style="font-weight:500">${p.nome}</td>
-      <td><span class="prazo-pill ${prazoClass}">${p.prazo} dias</span></td>
-      <td style="text-align:center">${p.qtd}</td>
-      <td style="font-size:12px;color:#666">${fmtDate(prev)}</td>
-      <td style="text-align:center">${antecTxt}</td>
-      <td><div class="td-actions">
-        <button class="icon-btn edit" onclick="editarProduto(${i})" title="Editar">✎</button>
-        <button class="icon-btn del"  onclick="removerProduto(${i})" title="Remover">✕</button>
-      </div></td>
-    </tr>`;
-  }).join('');
-
-  // Badge prazo mais longo
-  const maxPrazo = Math.max(...listaProdutos.map(p=>p.prazo));
-  const maxPrev  = listaProdutos.filter(p=>p.prazo===maxPrazo).map(p=>calcEntregaPrevista(emissao,p.prazo)).filter(Boolean).sort().pop();
-  document.getElementById('prazo-max-txt').textContent = maxPrazo;
-  document.getElementById('entrega-max-txt').textContent = fmtDate(maxPrev||'');
-  infoGeral.style.display = emissao ? 'flex' : 'none';
-
-  atualizarDiffLabel();
-}
-
-function recalcTodos() {
-  renderTabelaProdutos();
-}
-
-function atualizarDiffLabel() {
-  const emissao = document.getElementById('f-emissao').value;
-  const datasol = document.getElementById('f-datasol').value;
-  const el = document.getElementById('diff-label');
-  if (listaProdutos.length && emissao && datasol) {
-    const maxPrazo = Math.max(...listaProdutos.map(p=>p.prazo));
-    const antec = calcAntecipacao(emissao, maxPrazo, datasol);
-    if (antec > 0) { el.textContent=antec+'d de antecipação (prazo mais longo)'; el.style.display='block'; }
-    else el.style.display='none';
-  } else el.style.display='none';
-}
-
-// ─── MOTIVO E URGÊNCIA ────────────────────────────────────────────────────────
-function selMotivo(btn, val) {
-  document.querySelectorAll('.chip').forEach(b=>b.classList.remove('sel'));
-  btn.classList.add('sel'); motivoSel=val;
-  document.getElementById('campo-outro').style.display = val==='Outro'?'flex':'none';
-}
-
-function selUrg(btn, val) {
-  document.querySelectorAll('.urg-btn').forEach(b=>b.classList.remove('sel-baixa','sel-media','sel-alta'));
-  btn.classList.add(val==='Baixa'?'sel-baixa':val==='Média'?'sel-media':'sel-alta');
-  urgSel=val;
-}
-
-// ─── GOOGLE SHEETS ────────────────────────────────────────────────────────────
-// ─── CONFIGURAÇÃO SUPABASE ───────────────────────────────────────────────────
-const SB_URL  = 'https://ixpvcpmwebcwjjcbssfo.supabase.co';
-const SB_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml4cHZjcG13ZWJjd2pqY2Jzc2ZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwMTI4ODQsImV4cCI6MjA5MTU4ODg4NH0.fyDz-uxM-AVK8G9lW2kjchCubifr1ySjugjp9yvKtEg';
-
-const SB_HEADERS = {
-  'Content-Type':  'application/json',
-  'apikey':        SB_KEY,
-  'Authorization': 'Bearer ' + SB_KEY,
-  'Prefer':        'return=minimal'
-};
-
-async function gravarNoSupabase(sol) {
-  // 1. Insere a solicitação principal
-  const payload = {
-    protocolo:        sol.protocolo,
-    data_registro:    sol.dataRegistro,
-    representante:    sol.representante,
-    pedido:           sol.pedido,
-    data_emissao:     sol.dataEmissao,
-    data_solicitada:  sol.dataSolicitada,
-    prazo_maximo:     sol.prazoMaximo,
-    entrega_prevista: sol.entregaPrevista,
-    dias_antecipacao: sol.diasAntecipacao || null,
-    total_produtos:   sol.totalProdutos,
-    qtd_total_itens:  sol.qtdTotalItens,
-    motivo:           sol.motivo,
-    urgencia:         sol.urgencia,
-    impacto:          sol.impacto || '',
-    obs:              sol.obs || '',
-    status_geral:     'Aguardando análise',
-    status_comercial: 'Pendente',
-    status_pcp:       'Pendente',
-    status_compras:   'Pendente',
-    status_final:     'Aguardando análise'
-  };
-
-  const resSol = await fetch(SB_URL + '/rest/v1/solicitacoes', {
-    method:  'POST',
-    headers: SB_HEADERS,
-    body:    JSON.stringify(payload)
+// ── RENDER BOARD ──────────────────────────────────────────────────────────────
+function renderBoard() {
+  const busca   = document.getElementById('search').value.toLowerCase();
+  const filtUrg = document.getElementById('filter-urg').value;
+  const filtrados = dados.filter(s => {
+    const mb = !busca || s.protocolo.toLowerCase().includes(busca) || (s.representante||'').toLowerCase().includes(busca) || (s.pedido||'').toLowerCase().includes(busca);
+    const mu = !filtUrg || s.urgencia === filtUrg;
+    return mb && mu;
   });
+  document.getElementById('st-total').textContent     = dados.length;
+  document.getElementById('st-alta').textContent      = dados.filter(s=>s.urgencia==='Alta').length;
+  document.getElementById('st-andamento').textContent = dados.filter(s=>(s.status_geral||'').startsWith('Em análise')).length;
+  document.getElementById('st-aprovado').textContent  = dados.filter(s=>s.status_geral==='Aprovado').length;
+  document.getElementById('st-reprovado').textContent = dados.filter(s=>s.status_geral==='Reprovado').length;
+  COLUNAS.forEach(col => {
+    const body  = document.getElementById('body-'+col);
+    const cnt   = document.getElementById('cnt-'+col);
+    const cards = filtrados.filter(s => (s.status_geral||'Aguardando análise') === col);
+    cnt.textContent = cards.length;
+    body.innerHTML = cards.length ? cards.map(renderCard).join('') : '<div class="empty-col">Nenhuma solicitação</div>';
+  });
+}
 
-  if (!resSol.ok) {
-    const err = await resSol.text();
-    throw new Error('Supabase solicitacoes: ' + err);
+function fmtISO(val) {
+  // Converte YYYY-MM-DD para DD/MM/YYYY
+  if (!val) return '—';
+  const p = String(val).split('-');
+  if (p.length === 3) return `${p[2]}/${p[1]}/${p[0]}`;
+  return val;
+}
+
+function fmtDataBR(iso) {
+  if (!iso) return '—';
+  // Suporta ISO completo (com T) ou só data
+  const d = new Date(iso.includes('T') ? iso : iso + 'T00:00:00');
+  if (isNaN(d)) return iso;
+  const dia  = String(d.getDate()).padStart(2,'0');
+  const mes  = String(d.getMonth()+1).padStart(2,'0');
+  const ano  = d.getFullYear();
+  const hora = String(d.getHours()).padStart(2,'0');
+  const min  = String(d.getMinutes()).padStart(2,'0');
+  return `${dia}/${mes}/${ano} ${hora}:${min}`;
+}
+
+function calcMelhorData(emissao, prazoMax) {
+  // Melhor data = entrega prevista original (prazo padrão a partir da emissão)
+  if (!emissao || !prazoMax) return null;
+  const partes = emissao.split('-');
+  if (partes.length !== 3) return null;
+  const d = new Date(Number(partes[0]), Number(partes[1])-1, Number(partes[2]));
+  d.setDate(d.getDate() + Number(prazoMax));
+  return `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}`;
+}
+
+
+function renderCard(s) {
+  const urgClass = 'tag-urg-'+(s.urgencia||'Baixa');
+  const prods = produtosMap[s.protocolo] || [];
+  const prodTxt = prods.length === 0 ? '—' : prods.length === 1 ? prods[0].produto : prods[0].produto+' +'+(prods.length-1);
+  const antec = s.dias_antecipacao ? s.dias_antecipacao+'d antecipação' : '';
+  const isReprovado   = s.status_geral === 'Reprovado';
+  const isConcluido   = s.status_geral === 'Aprovado' || s.status_geral === 'Reprovado';
+  const melhorData    = isReprovado
+    ? (s.melhor_data ? fmtISO(s.melhor_data) : calcMelhorData(s.data_emissao, s.prazo_maximo))
+    : null;
+  const dataFormatada = fmtDataBR(s.created_at || s.data_registro);
+
+  // Motivo reprovação: usa campo dedicado ou fallback para pareceres
+  const motivoReprovaTxt = isReprovado
+    ? (s.motivo_reprovacao || s.parecer_pcp || s.parecer_compras || s.parecer_comercial || '')
+    : '';
+
+  return `<div class="card" draggable="${ADMIN}"
+    ${ADMIN ? `ondragstart="onDragStart(event,'${s.protocolo}')" ondragend="onDragEnd(event)"` : ''}
+    onclick="abrirModal('${s.protocolo}')" style="${ADMIN?'':'cursor:default'}">
+    <div class="card-prot">${s.protocolo}</div>
+    <div class="card-rep">${s.representante||'—'}</div>
+    <div class="card-pedido">Pedido: ${s.pedido||'—'}</div>
+    <div class="card-tags">
+      <span class="tag ${urgClass}">${s.urgencia||'—'}</span>
+      ${s.prazo_maximo ? `<span class="tag tag-prazo">${s.prazo_maximo}d prazo</span>` : ''}
+      ${antec ? `<span class="tag tag-antec">${antec}</span>` : ''}
+    </div>
+    ${melhorData ? `<div style="margin-top:5px"><span class="tag-melhor-data">📅 Melhor data: ${melhorData}</span></div>` : ''}
+    ${motivoReprovaTxt ? `<div class="card-motivo-reprova">
+      <span class="reprova-label">❌ Motivo da reprovação:</span>
+      <span class="reprova-texto">${motivoReprovaTxt}</span>
+    </div>` : ''}
+    <div class="card-prods" style="margin-top:6px">${prodTxt}</div>
+    <div class="card-footer">
+      <span class="card-data">${dataFormatada}</span>
+      ${ADMIN ? `<button class="card-move-btn" onclick="event.stopPropagation();abrirModal('${s.protocolo}')">Mover →</button>` : ''}
+    </div>
+  </div>`;
+}
+
+// ── DRAG & DROP ───────────────────────────────────────────────────────────────
+function onDragStart(e, p) { if(!ADMIN) {e.preventDefault();return;} dragProtocolo=p; e.dataTransfer.effectAllowed='move'; setTimeout(()=>e.target.classList.add('dragging'),0); }
+function onDragEnd(e) { e.target.classList.remove('dragging'); document.querySelectorAll('.col-body').forEach(b=>b.classList.remove('drag-over')); }
+function onDragOver(e, col) { if(!ADMIN) return; e.preventDefault(); document.querySelectorAll('.col-body').forEach(b=>b.classList.remove('drag-over')); col.querySelector('.col-body').classList.add('drag-over'); }
+function onDrop(e, status) { if(!ADMIN) return; e.preventDefault(); document.querySelectorAll('.col-body').forEach(b=>b.classList.remove('drag-over')); if(!dragProtocolo) return; const sol=dados.find(s=>s.protocolo===dragProtocolo); if(!sol||sol.status_geral===status) return; abrirModalComStatus(dragProtocolo,status); dragProtocolo=null; }
+
+// ── MODAL ─────────────────────────────────────────────────────────────────────
+function abrirModal(protocolo) { cardAtual=dados.find(s=>s.protocolo===protocolo); novoStatus=null; if(!cardAtual) return; renderModal(); document.getElementById('modal-bg').classList.add('open'); }
+function abrirModalComStatus(protocolo, status) { cardAtual=dados.find(s=>s.protocolo===protocolo); novoStatus=status; if(!cardAtual) return; renderModal(); document.getElementById('modal-bg').classList.add('open'); }
+
+function renderBlocoParecer(s, setor, label) {
+  const texto = s['parecer_'+setor];
+  if (!texto) return '';
+  return `<div class="parecer-bloco parecer-${setor}" id="bloco-${setor}">
+    <div class="parecer-bloco-header">
+      <span>${label}</span>
+      ${ADMIN ? `<div style="display:flex;gap:6px">
+        <button class="parecer-edit-btn" onclick="editarParecer('${setor}')">Editar</button>
+        <button class="parecer-del-btn"  onclick="deletarParecer('${setor}')">✕</button>
+      </div>` : ''}
+    </div>
+    <div class="parecer-bloco-body" id="body-${setor}">${texto}</div>
+  </div>`;
+}
+
+function selecionarSetorParecer(btn) {
+  document.querySelectorAll('.setor-btn').forEach(b => b.classList.remove('ativo'));
+  btn.classList.add('ativo');
+}
+
+function renderModal() {
+  const s = cardAtual;
+  const prods = produtosMap[s.protocolo] || [];
+  document.getElementById('modal-titulo').textContent = s.protocolo;
+  const pill = st => { const cls=st==='Aprovado'?'aprovado':st==='Reprovado'?'reprovado':st&&st.startsWith('Em')?'em-analise':'pendente'; return `<span class="status-pill ${cls}">${st||'Pendente'}</span>`; };
+  const colBtns = COLUNAS.map(col => { const cur=(s.status_geral||'Aguardando análise')===col, nov=novoStatus===col; return `<button class="move-col-btn${cur||nov?' current':''}" onclick="selecionarStatus('${col}')">${col.replace('Em análise — ','')}</button>`; }).join('');
+  document.getElementById('modal-body').innerHTML = `
+    <div class="modal-tabs">
+      <button class="modal-tab-btn active" onclick="trocarAbaModal('detalhes',this)">Detalhes</button>
+      <button class="modal-tab-btn" onclick="trocarAbaModal('historico',this)">Histórico</button>
+    </div>
+
+    <div class="modal-tab-panel active" id="modal-tab-detalhes">
+    <div class="modal-section"><h4>Identificação</h4>
+      <div class="modal-grid">
+        <div class="modal-field"><span>Representante</span><b>${s.representante||'—'}</b></div>
+        <div class="modal-field"><span>Pedido</span><b>${s.pedido||'—'}</b></div>
+        <div class="modal-field"><span>Data emissão</span><b>${fmtISO(s.data_emissao)}</b></div>
+        <div class="modal-field"><span>Data solicitada</span><b>${fmtISO(s.data_solicitada)}</b></div>
+        <div class="modal-field"><span>Prazo máximo</span><b>${s.prazo_maximo||'—'} dias</b></div>
+        <div class="modal-field"><span>Antecipação</span><b>${s.dias_antecipacao||'—'} dias</b></div>
+        <div class="modal-field"><span>Urgência</span><b>${s.urgencia||'—'}</b></div>
+        <div class="modal-field"><span>Motivo</span><b>${s.motivo||'—'}</b></div>
+      </div>
+      ${s.impacto?`<div class="modal-field" style="margin-top:8px"><span>Impacto</span><b>${s.impacto}</b></div>`:''}
+    </div>
+    <div class="modal-section"><h4>Produtos (${prods.length})</h4>
+      <div class="prod-list">${prods.length?prods.map(p=>`<div class="prod-item"><span>${p.produto}</span><span>${p.prazo}d — Qtd ${p.qtd}</span></div>`).join(''):'<div class="prod-item">—</div>'}</div>
+    </div>
+    <div class="modal-section"><h4>Comentários por setor</h4>
+      <div class="pareceres-wrap" id="pareceres-wrap">
+        ${renderBlocoParecer(s,'comercial','Comercial')}
+        ${renderBlocoParecer(s,'compras','Compras')}
+        ${renderBlocoParecer(s,'pcp','PCP')}
+        ${(!s.parecer_comercial&&!s.parecer_compras&&!s.parecer_pcp) ? '<div style="font-size:12px;color:var(--gray-500)">Nenhum comentário ainda.</div>' : ''}
+      </div>
+      ${ADMIN ? `<div class="novo-parecer-wrap">
+        <label>Adicionar comentário</label>
+        <div class="setor-sel">
+          <button class="setor-btn" data-setor="comercial" onclick="selecionarSetorParecer(this)">Comercial</button>
+          <button class="setor-btn" data-setor="compras"   onclick="selecionarSetorParecer(this)">Compras</button>
+          <button class="setor-btn" data-setor="pcp"       onclick="selecionarSetorParecer(this)">PCP</button>
+        </div>
+        <textarea id="novo-parecer-txt" placeholder="Escreva o comentário do setor selecionado..."></textarea>
+        <div style="display:flex;justify-content:flex-end;margin-top:8px">
+          <button class="btn primary" style="padding:7px 18px;font-size:12px" onclick="salvarNovoComentario()">Salvar comentário</button>
+        </div>
+      </div>` : ''}
+    </div>
+    ${ADMIN?`<div class="move-section"><h4>Mover para</h4>
+      <div class="move-cols">${colBtns}</div>
+      <div id="motivo-reprova-wrap" style="${novoStatus==='Reprovado'?'':'display:none'}" class="motivo-reprova-wrap">
+        <label>⚠️ Motivo da reprovação (obrigatório)</label>
+        <textarea id="motivo-reprova-input" placeholder="Descreva o motivo da reprovação..." style="margin-bottom:10px"></textarea>
+        <label style="margin-top:8px">📅 Melhor data possível (obrigatório)</label>
+        <input type="date" id="melhor-data-input" style="width:100%;border:1px solid #f09595;border-radius:6px;padding:8px;font-size:13px;font-family:inherit;background:#fff;outline:none;margin-top:4px" />
+      </div>
+      <div class="parecer-area" id="parecer-area" style="${novoStatus&&novoStatus!=='Reprovado'?'':'display:none'}">
+        <label>Parecer / observação</label>
+        <textarea id="parecer-input" placeholder="Observação adicional (opcional)..."></textarea>
+      </div>
+    </div>`:''}
+    </div>
+
+    <div class="modal-tab-panel" id="modal-tab-historico">
+      <div class="hist-loading" id="hist-loading">Carregando histórico...</div>
+      <div class="historico-list" id="historico-list" style="display:none"></div>
+    </div>
+    `;
+  if (ADMIN) document.getElementById('btn-salvar-modal').style.display = '';
+}
+
+function trocarAbaModal(aba, btn) {
+  document.querySelectorAll('.modal-tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.modal-tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('modal-tab-' + aba).classList.add('active');
+  if (aba === 'historico') carregarHistorico(cardAtual.protocolo);
+}
+
+function statusDotClass(status) {
+  if (!status) return 'default';
+  if (status.includes('Comercial')) return 'comercial';
+  if (status.includes('Compras'))   return 'compras';
+  if (status.includes('PCP'))       return 'pcp';
+  if (status === 'Aprovado')        return 'aprovado';
+  if (status === 'Reprovado')       return 'reprovado';
+  if (status === 'Aguardando análise') return 'aguardando';
+  return 'default';
+}
+
+function statusIcone(status) {
+  if (!status) return '○';
+  if (status.includes('Comercial')) return 'C';
+  if (status.includes('Compras'))   return 'Co';
+  if (status.includes('PCP'))       return 'P';
+  if (status === 'Aprovado')        return '✓';
+  if (status === 'Reprovado')       return '✕';
+  return '○';
+}
+
+async function carregarHistorico(protocolo) {
+  const listEl    = document.getElementById('historico-list');
+  const loadEl    = document.getElementById('hist-loading');
+  if (!listEl || !loadEl) return;
+  loadEl.style.display = 'block';
+  listEl.style.display = 'none';
+  try {
+    const res = await fetch(
+      SB_URL + '/rest/v1/historico_movimentacoes?protocolo=eq.' + encodeURIComponent(protocolo) + '&order=movido_em.desc',
+      { headers: SB_H }
+    );
+    const hist = await res.json();
+    if (!hist.length) {
+      loadEl.textContent = 'Nenhuma movimentação registrada ainda.';
+      return;
+    }
+    listEl.innerHTML = hist.map(h => {
+      const dotCls = statusDotClass(h.status_para);
+      const icone  = statusIcone(h.status_para);
+      const data   = h.movido_em ? fmtDataBR(h.movido_em) : '—';
+      const de     = h.status_de ? `<span style="color:var(--gray-500)"> · de: ${h.status_de}</span>` : '';
+      const parecer = h.parecer ? `<div class="hist-parecer">${h.parecer}</div>` : '';
+      return `<div class="historico-item">
+        <div class="historico-dot ${dotCls}">${icone}</div>
+        <div class="historico-body">
+          <h4>${h.status_para}${de}</h4>
+          <div class="hist-data">${data}</div>
+          ${parecer}
+        </div>
+      </div>`;
+    }).join('');
+    loadEl.style.display = 'none';
+    listEl.style.display = 'flex';
+  } catch(e) {
+    loadEl.textContent = 'Erro ao carregar histórico.';
   }
+}
 
-  // 2. Insere os produtos vinculados
-  if (sol.produtos && sol.produtos.length > 0) {
-    const prodRows = sol.produtos.map(p => ({
-      protocolo: sol.protocolo,
-      produto:   p.nome,
-      prazo:     p.prazo,
-      qtd:       p.qtd
-    }));
-
-    const resProd = await fetch(SB_URL + '/rest/v1/solicitacao_produtos', {
+async function gravarHistorico(protocolo, statusDe, statusPara, parecer) {
+  try {
+    await fetch(SB_URL + '/rest/v1/historico_movimentacoes', {
       method:  'POST',
-      headers: SB_HEADERS,
-      body:    JSON.stringify(prodRows)
+      headers: { ...SB_H, 'Prefer': 'return=minimal' },
+      body:    JSON.stringify({ protocolo, status_de: statusDe, status_para: statusPara, parecer: parecer || '' })
     });
+  } catch(e) { console.warn('Histórico erro:', e); }
+}
 
-    if (!resProd.ok) {
-      const err = await resProd.text();
-      throw new Error('Supabase produtos: ' + err);
-    }
+function selecionarStatus(status) {
+  novoStatus = status;
+  document.querySelectorAll('.move-col-btn').forEach(b=>b.classList.remove('current'));
+  event.target.classList.add('current');
+  exibirCamposStatus(status);
+}
+
+function exibirCamposStatus(status) {
+  const motivoWrap  = document.getElementById('motivo-reprova-wrap');
+  const parecerArea = document.getElementById('parecer-area');
+  if (!motivoWrap || !parecerArea) return;
+  if (status === 'Reprovado') {
+    motivoWrap.style.display  = 'block';
+    parecerArea.style.display = 'none';
+  } else if (status) {
+    motivoWrap.style.display  = 'none';
+    parecerArea.style.display = 'block';
+  } else {
+    motivoWrap.style.display  = 'none';
+    parecerArea.style.display = 'none';
   }
 }
 
-// ─── ENVIO DO FORMULÁRIO ──────────────────────────────────────────────────────
-function enviarForm() {
-  const v = id => document.getElementById(id).value.trim();
-  const erros = [];
-  if (!v('f-nome'))    erros.push('representante');
-  if (!v('f-pedido'))  erros.push('nº do pedido');
-  if (!v('f-emissao')) erros.push('data de emissão');
-  if (!v('f-datasol')) erros.push('data solicitada');
-  if (listaProdutos.length===0) erros.push('ao menos 1 produto');
-  if (!motivoSel)      erros.push('motivo');
-  if (motivoSel==='Outro' && !v('f-outro')) erros.push('descrição do motivo');
-  if (!urgSel)         erros.push('urgência');
+async function salvarMovimentacao() {
+  if (!novoStatus||!cardAtual) return;
+  if (novoStatus===(cardAtual.status_geral||'Aguardando análise')) { fecharModalBtn(); return; }
 
-  const errEl = document.getElementById('err-form');
-  if (erros.length) { errEl.textContent='Preencha: '+erros.join(', ')+'.'; errEl.style.display='block'; return; }
-  errEl.style.display='none';
+  // Valida motivo e melhor data obrigatórios ao reprovar
+  if (novoStatus === 'Reprovado') {
+    const motivo     = (document.getElementById('motivo-reprova-input')?.value||'').trim();
+    const melhorData = (document.getElementById('melhor-data-input')?.value||'').trim();
+    if (!motivo) {
+      document.getElementById('motivo-reprova-input').style.borderColor = '#8C3A3A';
+      document.getElementById('motivo-reprova-input').focus();
+      showToast('Informe o motivo da reprovação', 'error');
+      return;
+    }
+    if (!melhorData) {
+      document.getElementById('melhor-data-input').style.borderColor = '#8C3A3A';
+      document.getElementById('melhor-data-input').focus();
+      showToast('Informe a melhor data possível', 'error');
+      return;
+    }
+  }
 
-  const emissao = v('f-emissao'), datasol = v('f-datasol');
-  const maxPrazo = Math.max(...listaProdutos.map(p=>p.prazo));
-  const protocolo = gerarProtocolo();
+  // Salva novo parecer por setor se houver
+  const novoParecer = (document.getElementById('novo-parecer-txt')?.value||'').trim();
+  const setorAtivo  = document.querySelector('.setor-btn.ativo')?.dataset?.setor || null;
 
-  solicitacao = {
-    protocolo,
-    dataRegistro:    new Date().toLocaleDateString('pt-BR'),
-    representante:   v('f-nome'),
-    pedido:          v('f-pedido'),
-    dataEmissao:     emissao,
-    dataSolicitada:  datasol,
-    prazoMaximo:     maxPrazo,
-    entregaPrevista: calcEntregaPrevista(emissao, maxPrazo),
-    diasAntecipacao: calcAntecipacao(emissao, maxPrazo, datasol),
-    totalProdutos:   listaProdutos.length,
-    qtdTotalItens:   listaProdutos.reduce((s,p)=>s+p.qtd,0),
-    motivo:          motivoSel==='Outro' ? v('f-outro') : motivoSel,
-    urgencia:        urgSel,
-    impacto:         v('f-impacto'),
-    obs:             v('f-obs'),
-    produtos:        listaProdutos,
-    statusFinal:     'Aguardando análise'
-  };
+  const agora = new Date().toISOString();
+  const setor = novoStatus.includes('Comercial')?'comercial':novoStatus.includes('PCP')?'pcp':novoStatus.includes('Compras')?'compras':null;
+  const parecer = novoStatus === 'Reprovado'
+    ? (document.getElementById('motivo-reprova-input')?.value||'').trim()
+    : (document.getElementById('parecer-input')?.value||'').trim();
+  const melhorDataVal = novoStatus === 'Reprovado'
+    ? (document.getElementById('melhor-data-input')?.value||'').trim()
+    : null;
 
-  const overlay = document.getElementById('sending-overlay');
-  overlay.style.display='flex';
+  const patch = { status_geral: novoStatus };
+  if (novoStatus==='Aprovado'||novoStatus==='Reprovado') { patch.status_final=novoStatus; patch.data_conclusao=agora; }
+  if (melhorDataVal) patch.melhor_data = melhorDataVal;
+  if (novoStatus==='Reprovado' && parecer) patch.motivo_reprovacao = parecer;
+  if (setor) { patch['data_'+setor]=agora; }
+  if (setor && parecer && novoStatus!=='Reprovado') { patch['parecer_'+setor]=parecer; }
 
-  gravarNoSupabase(solicitacao).then(() => {
-    overlay.style.display='none';
-    irParaConfirmacao();
-  }).catch(err => {
-    overlay.style.display='none';
-    document.getElementById('err-form').textContent = 'Erro ao gravar no banco: ' + err.message;
-    document.getElementById('err-form').style.display = 'block';
+  // Adiciona novo comentário de setor explicitamente selecionado
+  if (novoParecer && setorAtivo) { patch['parecer_'+setorAtivo]=novoParecer; patch['data_'+setorAtivo]=agora; }
+
+  document.getElementById('btn-salvar-modal').textContent='Salvando...';
+  document.getElementById('btn-salvar-modal').disabled=true;
+  try {
+    const res=await fetch(SB_URL+'/rest/v1/solicitacoes?protocolo=eq.'+cardAtual.protocolo,{method:'PATCH',headers:{...SB_H,'Prefer':'return=minimal'},body:JSON.stringify(patch)});
+    if (!res.ok) throw new Error(await res.text());
+    const idx=dados.findIndex(s=>s.protocolo===cardAtual.protocolo);
+    if (idx!==-1) Object.assign(dados[idx],patch);
+    // Grava no histórico
+    const statusAnterior = cardAtual.status_geral || 'Aguardando análise';
+    const parecerHist    = novoStatus === 'Reprovado'
+      ? (document.getElementById('motivo-reprova-input')?.value||'').trim()
+      : (document.getElementById('parecer-input')?.value||'').trim();
+    gravarHistorico(cardAtual.protocolo, statusAnterior, novoStatus, parecerHist);
+
+    fecharModalBtn(); renderBoard();
+    if (novoStatus) showToast('Movido para: '+novoStatus, 'success');
+  } catch(e) { showToast('Erro ao salvar: '+e.message,'error'); }
+  finally { document.getElementById('btn-salvar-modal').textContent='Confirmar movimentação'; document.getElementById('btn-salvar-modal').disabled=false; }
+}
+
+function editarParecer(setor) {
+  const bodyEl = document.getElementById('body-' + setor);
+  const blocoEl = document.getElementById('bloco-' + setor);
+  const textoAtual = bodyEl.textContent.trim();
+  const corSave = setor==='comercial'?'#2E6DA4':setor==='compras'?'#5A4E7A':'#7A6030';
+
+  bodyEl.innerHTML = `
+    <textarea id="edit-${setor}" style="width:100%;border:none;background:transparent;font-size:13px;font-family:inherit;resize:vertical;min-height:60px;outline:none;line-height:1.5">${textoAtual}</textarea>
+    <div style="display:flex;gap:8px;margin-top:8px;justify-content:flex-end">
+      <button onclick="cancelarEdicaoParecer('${setor}','${textoAtual.replace(/'/g,"&#39;")}')" style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;cursor:pointer;border:1px solid #ccc;background:transparent">Cancelar</button>
+      <button class="parecer-save-btn" onclick="salvarParecer('${setor}')" style="background:${corSave};color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;cursor:pointer;border:none">Salvar</button>
+    </div>`;
+
+  // Troca botão Editar por nada enquanto edita
+  const editBtn = blocoEl.querySelector('.parecer-edit-btn');
+  if (editBtn) editBtn.style.display = 'none';
+}
+
+function cancelarEdicaoParecer(setor, textoOriginal) {
+  document.getElementById('body-' + setor).textContent = textoOriginal;
+  const editBtn = document.getElementById('bloco-' + setor)?.querySelector('.parecer-edit-btn');
+  if (editBtn) editBtn.style.display = '';
+}
+
+async function salvarParecer(setor) {
+  const novoTexto = document.getElementById('edit-' + setor)?.value?.trim() || '';
+  if (!novoTexto) return;
+
+  const patch = { ['parecer_' + setor]: novoTexto };
+  try {
+    const res = await fetch(SB_URL + '/rest/v1/solicitacoes?protocolo=eq.' + cardAtual.protocolo, {
+      method: 'PATCH',
+      headers: { ...SB_H, 'Prefer': 'return=minimal' },
+      body: JSON.stringify(patch)
+    });
+    if (!res.ok) throw new Error(await res.text());
+
+    // Atualiza local
+    const idx = dados.findIndex(s => s.protocolo === cardAtual.protocolo);
+    if (idx !== -1) dados[idx]['parecer_' + setor] = novoTexto;
+    cardAtual['parecer_' + setor] = novoTexto;
+
+    // Atualiza visual
+    const bodyEl = document.getElementById('body-' + setor);
+    bodyEl.textContent = novoTexto;
+    const editBtn = document.getElementById('bloco-' + setor)?.querySelector('.parecer-edit-btn');
+    if (editBtn) editBtn.style.display = '';
+
+    showToast('Parecer atualizado', 'success');
+  } catch(e) {
+    showToast('Erro ao salvar parecer', 'error');
+  }
+}
+
+async function salvarNovoComentario() {
+  const txt    = (document.getElementById('novo-parecer-txt')?.value||'').trim();
+  const setor  = document.querySelector('.setor-btn.ativo')?.dataset?.setor || null;
+  if (!txt)   { showToast('Escreva o comentário antes de salvar', 'error'); return; }
+  if (!setor) { showToast('Selecione o setor do comentário', 'error'); return; }
+
+  const patch = { ['parecer_'+setor]: txt, ['data_'+setor]: new Date().toISOString() };
+  try {
+    const res = await fetch(SB_URL+'/rest/v1/solicitacoes?protocolo=eq.'+cardAtual.protocolo, {
+      method: 'PATCH', headers: {...SB_H,'Prefer':'return=minimal'}, body: JSON.stringify(patch)
+    });
+    if (!res.ok) throw new Error(await res.text());
+
+    // Atualiza local e re-renderiza modal sem fechar
+    const idx = dados.findIndex(s=>s.protocolo===cardAtual.protocolo);
+    if (idx !== -1) Object.assign(dados[idx], patch);
+    Object.assign(cardAtual, patch);
+
+    // Limpa campo
+    document.getElementById('novo-parecer-txt').value = '';
+    document.querySelectorAll('.setor-btn').forEach(b=>b.classList.remove('ativo'));
+
+    // Atualiza a lista de pareceres no modal sem fechar
+    const wrap = document.getElementById('pareceres-wrap');
+    if (wrap) {
+      wrap.innerHTML =
+        renderBlocoParecer(cardAtual,'comercial','Comercial') +
+        renderBlocoParecer(cardAtual,'compras','Compras') +
+        renderBlocoParecer(cardAtual,'pcp','PCP') +
+        (!cardAtual.parecer_comercial&&!cardAtual.parecer_compras&&!cardAtual.parecer_pcp
+          ? '<div style="font-size:12px;color:var(--gray-500)">Nenhum comentário ainda.</div>' : '');
+    }
+    showToast('Comentário salvo', 'success');
+  } catch(e) { showToast('Erro ao salvar: '+e.message, 'error'); }
+}
+
+async function deletarParecer(setor) {
+  if (!confirm('Remover comentário do setor ' + setor + '?')) return;
+  const patch = { ['parecer_'+setor]: '' };
+  try {
+    const res = await fetch(SB_URL+'/rest/v1/solicitacoes?protocolo=eq.'+cardAtual.protocolo, {
+      method: 'PATCH', headers: {...SB_H,'Prefer':'return=minimal'}, body: JSON.stringify(patch)
+    });
+    if (!res.ok) throw new Error(await res.text());
+    const idx = dados.findIndex(s=>s.protocolo===cardAtual.protocolo);
+    if (idx!==-1) dados[idx]['parecer_'+setor]='';
+    cardAtual['parecer_'+setor]='';
+    // Remove bloco do DOM
+    document.getElementById('bloco-'+setor)?.remove();
+    showToast('Comentário removido', 'success');
+  } catch(e) { showToast('Erro ao remover: '+e.message,'error'); }
+}
+
+function fecharModal(e) { if(e.target===document.getElementById('modal-bg')) fecharModalBtn(); }
+function fecharModalBtn() { document.getElementById('modal-bg').classList.remove('open'); cardAtual=null; novoStatus=null; }
+
+// ── FILTROS DO DASHBOARD ──────────────────────────────────────────────────────
+let dadosDashFiltrados = null;
+
+function popularFiltroRep() {
+  const sel = document.getElementById('df-rep');
+  if (!sel) return;
+  const reps = [...new Set(dados.map(s=>s.representante||'').filter(Boolean))].sort();
+  const atual = sel.value;
+  sel.innerHTML = '<option value="">Todos</option>' + reps.map(r=>`<option value="${r}"${r===atual?' selected':''}>${r}</option>`).join('');
+}
+
+function aplicarFiltrosDash() {
+  const rep   = document.getElementById('df-rep').value;
+  const ini   = document.getElementById('df-inicio').value;
+  const fim   = document.getElementById('df-fim').value;
+
+  dadosDashFiltrados = dados.filter(s => {
+    if (rep && s.representante !== rep) return false;
+    if (ini || fim) {
+      // data_registro no formato DD/MM/YYYY
+      const partes = (s.data_registro||'').split('/');
+      if (partes.length === 3) {
+        const dataISO = `${partes[2]}-${partes[1]}-${partes[0]}`;
+        if (ini && dataISO < ini) return false;
+        if (fim && dataISO > fim) return false;
+      }
+    }
+    return true;
   });
+
+  const partes = [];
+  if (rep) partes.push(rep);
+  if (ini) partes.push('a partir de ' + ini.split('-').reverse().join('/'));
+  if (fim) partes.push('até ' + fim.split('-').reverse().join('/'));
+
+  const info = document.getElementById('dash-filter-info');
+  if (partes.length) {
+    info.textContent = `Filtro ativo: ${partes.join(' · ')} (${dadosDashFiltrados.length} registros)`;
+    info.style.display = 'inline';
+  } else {
+    info.style.display = 'none';
+  }
+
+  renderDashboard();
 }
 
-// ─── CONFIRMAÇÃO ──────────────────────────────────────────────────────────────
-function irParaConfirmacao() {
-  document.getElementById('panel-form').classList.remove('active');
-  document.getElementById('panel-fim').classList.add('active');
-  document.getElementById('step1').classList.remove('active'); document.getElementById('step1').classList.add('done');
-  document.getElementById('step2').classList.add('active');
-  document.getElementById('prot-display').textContent = solicitacao.protocolo;
-  document.getElementById('header-prot').textContent  = solicitacao.protocolo;
-
-  const fields = [
-    ['Protocolo',         solicitacao.protocolo],
-    ['Data de registro',  solicitacao.dataRegistro],
-    ['Representante',     solicitacao.representante],
-    ['Nº do pedido',      solicitacao.pedido],
-    ['Data de emissão',   fmtDate(solicitacao.dataEmissao)],
-    ['Data solicitada',   fmtDate(solicitacao.dataSolicitada)],
-    ['Prazo máximo',      solicitacao.prazoMaximo+' dias'],
-    ['Entrega prevista',  fmtDate(solicitacao.entregaPrevista)],
-    ['Antecipação',       (solicitacao.diasAntecipacao||'—')+' dias'],
-    ['Total de produtos', solicitacao.totalProdutos],
-    ['Qtd total de itens',solicitacao.qtdTotalItens],
-    ['Motivo',            solicitacao.motivo],
-    ['Urgência',          solicitacao.urgencia],
-    ['Impacto relatado',  solicitacao.impacto||'—'],
-    ['Observações',       solicitacao.obs||'—'],
-  ];
-  document.getElementById('review-table-fim').innerHTML = fields.map(([k,v])=>`<tr><td>${k}</td><td>${v||'—'}</td></tr>`).join('');
-
-  // Tabela de produtos na confirmação
-  const prazoClass = p => p.prazo===45?'prazo-45':p.prazo===50?'prazo-50':'prazo-60';
-  document.getElementById('review-produtos-fim').innerHTML =
-    `<table class="prod-table"><thead><tr><th>#</th><th>Produto</th><th>Prazo</th><th>Qtd</th><th>Entrega prevista</th></tr></thead><tbody>`+
-    solicitacao.produtos.map((p,i)=>
-      `<tr><td style="color:#aaa">${i+1}</td><td style="font-weight:500">${p.nome}</td>`+
-      `<td><span class="prazo-pill ${prazoClass(p)}">${p.prazo} dias</span></td>`+
-      `<td style="text-align:center">${p.qtd}</td>`+
-      `<td style="font-size:12px;color:#666">${fmtDate(calcEntregaPrevista(solicitacao.dataEmissao,p.prazo))}</td></tr>`
-    ).join('')+`</tbody></table>`;
-
-  window.scrollTo({top:0,behavior:'smooth'});
+function limparFiltrosDash() {
+  document.getElementById('df-rep').value   = '';
+  document.getElementById('df-inicio').value = '';
+  document.getElementById('df-fim').value    = '';
+  dadosDashFiltrados = null;
+  document.getElementById('dash-filter-info').style.display = 'none';
+  renderDashboard();
 }
 
-// ─── EXPORTAR CSV ─────────────────────────────────────────────────────────────
-function exportarPDF() {
-  const prods = solicitacao.produtos || [];
-  const linhasProd = prods.map((p,i) =>
-    `<tr><td>${i+1}</td><td>${p.nome}</td><td>${p.prazo} dias</td><td>${p.qtd}</td><td>${fmtDate(calcEntregaPrevista(solicitacao.dataEmissao,p.prazo))}</td></tr>`
+// ── DASHBOARD ─────────────────────────────────────────────────────────────────
+function renderDashboard() {
+  popularFiltroRep();
+  const src = dadosDashFiltrados !== null ? dadosDashFiltrados : dados;
+  const total    = src.length;
+  const aprov    = src.filter(s=>s.status_geral==='Aprovado').length;
+  const reprov   = src.filter(s=>s.status_geral==='Reprovado').length;
+  const andamento= src.filter(s=>(s.status_geral||'').startsWith('Em análise')).length;
+  const alta     = src.filter(s=>s.urgencia==='Alta').length;
+
+  // Tempo médio de resolução (concluídos com data_conclusao e created_at)
+  const concluidos = src.filter(s=>s.data_conclusao&&s.created_at);
+  let tempoMedio = '—';
+  if (concluidos.length) {
+    const soma = concluidos.reduce((acc,s)=>{
+      const diff = (new Date(s.data_conclusao)-new Date(s.created_at))/(1000*60*60*24);
+      return acc + diff;
+    },0);
+    tempoMedio = (soma/concluidos.length).toFixed(1);
+  }
+
+  document.getElementById('d-total').textContent    = total;
+  document.getElementById('d-aprov').textContent    = aprov;
+  document.getElementById('d-reprov').textContent   = reprov;
+  document.getElementById('d-reprov-pct').textContent = total ? Math.round(reprov/total*100)+'% do total' : '';
+  document.getElementById('d-andamento').textContent= andamento;
+  document.getElementById('d-alta').textContent     = alta;
+  document.getElementById('d-tempo').textContent    = tempoMedio === '—' ? '—' : tempoMedio+'d';
+
+  // Status bars
+  const statusCores = {
+    'Aguardando análise':    '#a0aec0',
+    'Em análise — Comercial':'#2E6DA4',
+    'Em análise — Compras':  '#7F77DD',
+    'Em análise — PCP':      '#BA7517',
+    'Aprovado':              '#1D7044',
+    'Reprovado':             '#A32D2D',
+  };
+  const cntStatus = {};
+  COLUNAS.forEach(c => cntStatus[c] = src.filter(s=>(s.status_geral||'Aguardando análise')===c).length);
+  const maxSt = Math.max(...Object.values(cntStatus), 1);
+  document.getElementById('d-status-bars').innerHTML = COLUNAS.map(col =>
+    barRow(col.replace('Em análise — ',''), cntStatus[col], maxSt, statusCores[col])
   ).join('');
 
-  const html = `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">
-  <title>${solicitacao.protocolo}</title>
-  <style>
-    body { font-family: Arial, sans-serif; font-size: 13px; color: #333; padding: 32px; max-width: 800px; margin: 0 auto; }
-    h1 { font-size: 18px; color: #1A3A5C; margin-bottom: 4px; }
-    .sub { font-size: 12px; color: #888; margin-bottom: 24px; }
-    h2 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #1A3A5C; background: #E6F1FB; padding: 6px 10px; margin: 20px 0 8px; border-radius: 4px; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
-    td { padding: 6px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
-    td:first-child { color: #888; font-weight: 500; width: 38%; white-space: nowrap; }
-    th { background: #2E6DA4; color: #fff; padding: 7px 10px; text-align: left; font-size: 12px; }
-    .footer { margin-top: 32px; font-size: 11px; color: #aaa; border-top: 1px solid #eee; padding-top: 10px; }
-    @media print { body { padding: 16px; } }
-  </style></head><body>
-  <h1>Solicitação de Antecipação de Entrega</h1>
-  <div class="sub">Protocolo: <b>${solicitacao.protocolo}</b> &nbsp;|&nbsp; Emitido em ${solicitacao.dataRegistro}</div>
-  <h2>Dados da solicitação</h2>
-  <table>
-    <tr><td>Representante</td><td>${solicitacao.representante||'—'}</td></tr>
-    <tr><td>Nº do pedido</td><td>${solicitacao.pedido||'—'}</td></tr>
-    <tr><td>Data de emissão</td><td>${fmtDate(solicitacao.dataEmissao)}</td></tr>
-    <tr><td>Data solicitada</td><td>${fmtDate(solicitacao.dataSolicitada)}</td></tr>
-    <tr><td>Prazo máximo</td><td>${solicitacao.prazoMaximo} dias</td></tr>
-    <tr><td>Entrega prevista</td><td>${fmtDate(solicitacao.entregaPrevista)}</td></tr>
-    <tr><td>Antecipação</td><td>${solicitacao.diasAntecipacao||'—'} dias</td></tr>
-    <tr><td>Motivo</td><td>${solicitacao.motivo||'—'}</td></tr>
-    <tr><td>Urgência</td><td>${solicitacao.urgencia||'—'}</td></tr>
-    <tr><td>Impacto</td><td>${solicitacao.impacto||'—'}</td></tr>
-    <tr><td>Observações</td><td>${solicitacao.obs||'—'}</td></tr>
-  </table>
-  <h2>Produtos (${prods.length})</h2>
-  <table>
-    <thead><tr><th>#</th><th>Produto</th><th>Prazo</th><th>Qtd</th><th>Entrega prevista</th></tr></thead>
-    <tbody>${linhasProd}</tbody>
-  </table>
-  <div class="footer">GATE-IA — Sistema de Antecipação de Entregas &nbsp;|&nbsp; ${solicitacao.protocolo}</div>
-  </body></html>`;
+  // Urgência donut
+  const urgData = [
+    {lbl:'Alta',  val:src.filter(s=>s.urgencia==='Alta').length,  cor:'#E24B4A'},
+    {lbl:'Média', val:src.filter(s=>s.urgencia==='Média').length, cor:'#EF9F27'},
+    {lbl:'Baixa', val:src.filter(s=>s.urgencia==='Baixa').length, cor:'#1D9E75'},
+  ];
+  desenharDonut('donut-urg', urgData);
+  document.getElementById('donut-urg-legend').innerHTML = urgData.map(d =>
+    `<div class="legend-item"><div class="legend-dot" style="background:${d.cor}"></div>${d.lbl}: <b>${d.val}</b></div>`
+  ).join('');
 
-  const janela = window.open('','_blank');
-  janela.document.write(html);
-  janela.document.close();
-  janela.onload = () => { janela.focus(); janela.print(); };
+  // Representantes
+  const cntRep = contarPor(src, 'representante');
+  const maxRep = Math.max(...Object.values(cntRep), 1);
+  document.getElementById('d-rep-bars').innerHTML = Object.entries(cntRep)
+    .sort((a,b)=>b[1]-a[1]).slice(0,10)
+    .map(([k,v]) => barRow(k, v, maxRep, '#2E6DA4')).join('');
+
+  // Motivos
+  const cntMot = contarPor(src, 'motivo');
+  const maxMot = Math.max(...Object.values(cntMot), 1);
+  document.getElementById('d-motivo-bars').innerHTML = Object.entries(cntMot)
+    .sort((a,b)=>b[1]-a[1]).slice(0,8)
+    .map(([k,v]) => barRow(k, v, maxMot, '#7F77DD')).join('');
+
+  // Produtos
+  const protocosSrc = new Set(src.map(s=>s.protocolo));
+  const cntProd = {};
+  Object.entries(produtosMap).forEach(([prot, ps]) => {
+    if (protocosSrc.has(prot)) ps.forEach(p => { cntProd[p.produto] = (cntProd[p.produto]||0)+1; });
+  });
+  const maxProd = Math.max(...Object.values(cntProd), 1);
+  document.getElementById('d-prod-bars').innerHTML = Object.entries(cntProd)
+    .sort((a,b)=>b[1]-a[1]).slice(0,15)
+    .map(([k,v]) => barRow(k, v, maxProd, '#0F6E56')).join('');
 }
 
-// ─── LIMPAR / NOVA SOLICITAÇÃO ────────────────────────────────────────────────
-function limpar() {
-  document.querySelectorAll('#panel-form input:not([type=checkbox]),#panel-form select,#panel-form textarea').forEach(el=>el.value='');
-  document.getElementById('f-prod-busca').value='';
-  document.getElementById('prod-dropdown').style.display='none';
-  produtoAtual=null; listaProdutos=[]; editandoIdx=null;
-  document.querySelectorAll('.chip').forEach(b=>b.classList.remove('sel'));
-  document.querySelectorAll('.urg-btn').forEach(b=>b.classList.remove('sel-baixa','sel-media','sel-alta'));
-  motivoSel=null; urgSel=null;
-  renderTabelaProdutos();
-  document.getElementById('diff-label').style.display='none';
-  document.getElementById('campo-outro').style.display='none';
-  document.getElementById('err-form').style.display='none';
+function barRow(label, val, max, cor) {
+  const pct = max > 0 ? Math.round(val/max*100) : 0;
+  return `<div class="bar-row">
+    <div class="bar-label" title="${label}">${label}</div>
+    <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${cor}"></div></div>
+    <div class="bar-val">${val}</div>
+  </div>`;
 }
 
-function novaSolicitacao() {
-  limpar(); solicitacao={};
-  document.getElementById('panel-fim').classList.remove('active');
-  document.getElementById('panel-form').classList.add('active');
-  document.getElementById('step1').classList.remove('done'); document.getElementById('step1').classList.add('active');
-  document.getElementById('step2').classList.remove('active');
-  document.getElementById('header-prot').textContent='';
-  window.scrollTo({top:0,behavior:'smooth'});
+function contarPor(arr, campo) {
+  const cnt = {};
+  arr.forEach(s => { const v=String(s[campo]||'—').trim(); cnt[v]=(cnt[v]||0)+1; });
+  return cnt;
 }
+
+function desenharDonut(id, data) {
+  const canvas = document.getElementById(id);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const total = data.reduce((s,d)=>s+d.val, 0);
+  ctx.clearRect(0, 0, 140, 140);
+  if (total === 0) {
+    ctx.beginPath(); ctx.arc(70,70,50,0,Math.PI*2); ctx.fillStyle='#e8eaed'; ctx.fill();
+    return;
+  }
+  let start = -Math.PI/2;
+  data.forEach(d => {
+    const slice = (d.val/total) * Math.PI*2;
+    ctx.beginPath(); ctx.moveTo(70,70); ctx.arc(70,70,60,start,start+slice); ctx.closePath();
+    ctx.fillStyle = d.cor; ctx.fill();
+    start += slice;
+  });
+  ctx.beginPath(); ctx.arc(70,70,36,0,Math.PI*2); ctx.fillStyle='#fff'; ctx.fill();
+  ctx.fillStyle='#1A3A5C'; ctx.font='bold 18px Arial'; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText(total, 70, 70);
+}
+
+// ── TOAST ──────────────────────────────────────────────────────────────────────
+function showToast(msg, tipo='') {
+  const t=document.getElementById('toast'); t.textContent=msg; t.className='toast '+(tipo||''); t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+// ── INIT ───────────────────────────────────────────────────────────────────────
+const badge = document.getElementById('modo-badge');
+if (ADMIN) {
+  badge.textContent = 'Modo admin';
+  badge.style.background = 'rgba(29,112,68,.5)';
+  badge.style.borderColor = 'rgba(29,112,68,.8)';
+  document.getElementById('tabs-bar').style.display = 'flex';
+  document.getElementById('btn-salvar-modal').style.display = '';
+} else {
+  badge.textContent = 'Modo visualização';
+}
+
+carregarDados();
+setInterval(carregarDados, 30000);
 </script>
 </body>
 </html>
