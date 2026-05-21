@@ -18,21 +18,21 @@
   }
   body { font-family: var(--font); background: #F5F5F3; color: var(--gray-700); min-height: 100vh; }
 
-  .page-header { background: #3D3E39; color: #FFFAF3; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .page-header { background: #3D3E39; color: #FFFAF3; padding: 10px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .page-header h1 { font-size: 17px; font-weight: 600; }
   .page-header span { font-size: 12px; opacity: .65; }
 
-  .progress-bar { background: #3D3E39; border-bottom: 1px solid rgba(255,255,255,.08); padding: 0 24px; }
+  .progress-bar { background: #fff; border-bottom: var(--border); padding: 0 24px; }
   .steps { display: flex; max-width: 860px; margin: 0 auto; }
   .step { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 14px 8px; gap: 6px; border-bottom: 3px solid transparent; }
-  .step.active { border-bottom-color: #FFFAF3; }
-  .step.done   { border-bottom-color: var(--green-light); }
-  .step-circle { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; background: rgba(255,255,255,.12); color: rgba(255,250,243,.5); }
-  .step.active .step-circle { background: #FFFAF3; color: #3D3E39; }
+  .step.active { border-bottom-color: var(--blue-mid); }
+  .step.done   { border-bottom-color: var(--green); }
+  .step-circle { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; background: var(--gray-200); color: var(--gray-500); }
+  .step.active .step-circle { background: var(--blue-mid); color: #fff; }
   .step.done   .step-circle { background: var(--green); color: #fff; }
-  .step-label { font-size: 11px; color: rgba(255,250,243,.5); text-align: center; line-height: 1.3; }
-  .step.active .step-label { color: #FFFAF3; font-weight: 600; }
-  .step.done   .step-label { color: var(--green-light); }
+  .step-label { font-size: 11px; color: var(--gray-500); text-align: center; line-height: 1.3; }
+  .step.active .step-label { color: var(--blue-mid); font-weight: 600; }
+  .step.done   .step-label { color: var(--green); }
 
   .container { max-width: 860px; margin: 28px auto; padding: 0 16px 48px; }
   .card { background: #fff; border-radius: var(--radius); border: var(--border); margin-bottom: 16px; overflow: visible; }
@@ -142,7 +142,7 @@
 <body>
 
 <div class="page-header">
-  <div style="display:flex;align-items:center;gap:16px"><div style="display:flex;flex-direction:column;line-height:1;gap:1px;user-select:none"><span style="font-size:8px;font-weight:300;color:rgba(255,250,243,.75);letter-spacing:.45em;font-family:'Segoe UI',Arial,sans-serif;text-transform:uppercase;padding-left:2px">GRUPO</span><span style="font-size:19px;font-weight:300;color:rgba(255,250,243,.95);letter-spacing:.28em;font-family:'Segoe UI',Arial,sans-serif;text-transform:uppercase">SOHOME</span></div><span style="width:1px;height:30px;background:rgba(255,255,241,.2);display:inline-block"></span><span style="color:rgba(255,250,243,.92);font-size:15px;font-weight:400;letter-spacing:.01em;font-family:'Segoe UI',Arial,sans-serif">Solicitação de Antecipação</span></div>
+  <div style="display:flex;align-items:center;gap:16px"><div style="display:flex;flex-direction:column;line-height:1;gap:1px;user-select:none"><span style="font-size:7px;font-weight:300;color:rgba(255,250,243,.75);letter-spacing:.45em;font-family:'Segoe UI',Arial,sans-serif;text-transform:uppercase;padding-left:2px">GRUPO</span><span style="font-size:16px;font-weight:300;color:rgba(255,250,243,.95);letter-spacing:.28em;font-family:'Segoe UI',Arial,sans-serif;text-transform:uppercase">SOHOME</span></div><span style="width:1px;height:30px;background:rgba(255,255,241,.2);display:inline-block"></span><span style="color:rgba(255,250,243,.92);font-size:15px;font-weight:400;letter-spacing:.01em;font-family:'Segoe UI',Arial,sans-serif">Solicitação de Antecipação</span></div>
   <span id="header-prot" style="font-size:12px;opacity:.65"></span>
 </div>
 
