@@ -64,6 +64,11 @@
   .col-compras    .col-header { background: var(--purple-light); } .col-compras .col-title { color: var(--purple); } .col-compras .col-count { background: var(--purple); color: #fff; }
   .col-aprovado   .col-header { background: var(--green-light); } .col-aprovado .col-title { color: var(--green); } .col-aprovado .col-count { background: var(--green); color: #fff; }
   .col-reprovado  .col-header { background: var(--red-light); } .col-reprovado .col-title { color: var(--red); } .col-reprovado .col-count { background: var(--red); color: #fff; }
+  .col-datas      .col-header { background: #E8F0E8; } .col-datas .col-title { color: #2E5E2E; } .col-datas .col-count { background: #3A7A3A; color: #fff; }
+  .col-encerrado  .col-header { background: #EBEBEB; } .col-encerrado .col-title { color: #555; } .col-encerrado .col-count { background: #888; color: #fff; }
+  .col-concluido  .col-header { background: #1A3A5C; } .col-concluido .col-title { color: #D6E4F0; } .col-concluido .col-count { background: #2E6DA4; color: #fff; }
+  .card.encerrado-auto { opacity: .7; border-left: 3px solid #aaa !important; }
+  .tag-encerrado { background: #EBEBEB; color: #555; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 8px; }
 
   /* ── CARD ── */
   .card { background: #fff; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); padding: 12px; cursor: pointer; transition: box-shadow .15s, transform .1s; user-select: none; }
@@ -315,9 +320,21 @@
         <div class="col-header"><span class="col-title">Aprovado</span><span class="col-count" id="cnt-Aprovado">0</span></div>
         <div class="col-body" id="body-Aprovado"></div>
       </div>
+      <div class="col col-datas" ondragover="onDragOver(event,this)" ondrop="onDrop(event,'Datas Ajustadas')">
+        <div class="col-header"><span class="col-title">Datas Ajustadas</span><span class="col-count" id="cnt-Datas Ajustadas">0</span></div>
+        <div class="col-body" id="body-Datas Ajustadas"></div>
+      </div>
+      <div class="col col-encerrado" ondragover="onDragOver(event,this)" ondrop="onDrop(event,'Encerrado')">
+        <div class="col-header"><span class="col-title">Encerrado</span><span class="col-count" id="cnt-Encerrado">0</span></div>
+        <div class="col-body" id="body-Encerrado"></div>
+      </div>
       <div class="col col-reprovado" ondragover="onDragOver(event,this)" ondrop="onDrop(event,'Reprovado')">
         <div class="col-header"><span class="col-title">Reprovado</span><span class="col-count" id="cnt-Reprovado">0</span></div>
         <div class="col-body" id="body-Reprovado"></div>
+      </div>
+      <div class="col col-concluido" ondragover="onDragOver(event,this)" ondrop="onDrop(event,'Concluído')">
+        <div class="col-header"><span class="col-title">Concluído</span><span class="col-count" id="cnt-Concluído">0</span></div>
+        <div class="col-body" id="body-Concluído"></div>
       </div>
     </div>
   </div>
@@ -427,7 +444,7 @@
 const SB_URL = 'https://ixpvcpmwebcwjjcbssfo.supabase.co';
 const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml4cHZjcG13ZWJjd2pqY2Jzc2ZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwMTI4ODQsImV4cCI6MjA5MTU4ODg4NH0.fyDz-uxM-AVK8G9lW2kjchCubifr1ySjugjp9yvKtEg';
 const SB_H  = { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' };
-const COLUNAS = ['Aguardando análise','Em análise — Comercial','Em análise — Compras','Em análise — PCP','Aprovado','Reprovado'];
+const COLUNAS = ['Aguardando análise','Em análise — Comercial','Em análise — Compras','Em análise — PCP','Aprovado','Datas Ajustadas','Encerrado','Reprovado','Concluído'];
 const ADMIN   = new URLSearchParams(window.location.search).get('modo') === 'admin';
 
 let dados = [], produtosMap = {}, cardAtual = null, novoStatus = null, dragProtocolo = null;
@@ -442,6 +459,40 @@ function mudarAba(aba, btn) {
 }
 
 // ── CARREGAR DADOS ────────────────────────────────────────────────────────────
+function diasSemMovimentacao(sol) {
+  // Pega a data da última movimentação (mais recente entre created_at e datas de setor)
+  const datas = [
+    sol.created_at,
+    sol.data_comercial,
+    sol.data_pcp,
+    sol.data_compras,
+    sol.data_conclusao,
+  ].filter(Boolean);
+  if (!datas.length) return 0;
+  const ultima = new Date(Math.max(...datas.map(d => new Date(d))));
+  return Math.floor((new Date() - ultima) / (1000 * 60 * 60 * 24));
+}
+
+async function moverParaEncerradoAutomatico() {
+  // Cards não concluídos com mais de 30 dias sem movimentação
+  const candidatos = dados.filter(s => {
+    const status = s.status_geral || 'Aguardando análise';
+    if (['Aprovado','Reprovado','Datas Ajustadas','Encerrado','Concluído'].includes(status)) return false;
+    return diasSemMovimentacao(s) > 30;
+  });
+  for (const sol of candidatos) {
+    try {
+      await fetch(SB_URL + '/rest/v1/solicitacoes?protocolo=eq.' + sol.protocolo, {
+        method: 'PATCH',
+        headers: { ...SB_H, 'Prefer': 'return=minimal' },
+        body: JSON.stringify({ status_geral: 'Encerrado', status_final: 'Encerrado automaticamente' })
+      });
+      const idx = dados.findIndex(s => s.protocolo === sol.protocolo);
+      if (idx !== -1) { dados[idx].status_geral = 'Encerrado'; dados[idx].status_final = 'Encerrado automaticamente'; }
+    } catch(e) { console.warn('Encerrado automático erro:', e); }
+  }
+}
+
 async function carregarDados() {
   try {
     const [resSol, resProd] = await Promise.all([
@@ -454,6 +505,7 @@ async function carregarDados() {
     prods.forEach(p => { if (!produtosMap[p.protocolo]) produtosMap[p.protocolo] = []; produtosMap[p.protocolo].push(p); });
     document.getElementById('loading-wrap').style.display = 'none';
     document.getElementById('board-wrap').style.display   = 'block';
+    await moverParaEncerradoAutomatico();
     renderBoard();
     if (document.getElementById('tab-dashboard').classList.contains('active')) renderDashboard();
   } catch(e) {
@@ -522,7 +574,7 @@ function renderCard(s) {
   const prodTxt = prods.length === 0 ? '—' : prods.length === 1 ? prods[0].produto : prods[0].produto+' +'+(prods.length-1);
   const antec = s.dias_antecipacao ? s.dias_antecipacao+'d antecipação' : '';
   const isReprovado   = s.status_geral === 'Reprovado';
-  const isConcluido   = s.status_geral === 'Aprovado' || s.status_geral === 'Reprovado';
+  const isConcluido   = ['Aprovado','Reprovado','Datas Ajustadas','Encerrado','Concluído'].includes(s.status_geral);
   const melhorData    = isReprovado
     ? (s.melhor_data ? fmtISO(s.melhor_data) : calcMelhorData(s.data_emissao, s.prazo_maximo))
     : null;
@@ -545,6 +597,7 @@ function renderCard(s) {
       ${antec ? `<span class="tag tag-antec">${antec}</span>` : ''}
     </div>
     ${melhorData ? `<div style="margin-top:5px"><span class="tag-melhor-data">📅 Melhor data: ${melhorData}</span></div>` : ''}
+    ${s.status_geral==='Encerrado' ? `<div style="margin-top:5px"><span class="tag-encerrado">⏸ Encerrado por inatividade</span></div>` : ''}
     ${motivoReprovaTxt ? `<div class="card-motivo-reprova">
       <span class="reprova-label">❌ Motivo da reprovação:</span>
       <span class="reprova-texto">${motivoReprovaTxt}</span>
