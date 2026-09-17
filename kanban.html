@@ -452,14 +452,23 @@ function mudarAba(aba, btn) {
 }
 
 // ── CARREGAR DADOS ────────────────────────────────────────────────────────────
-try {
-  renderBoard();
-  if (document.getElementById('tab-dashboard').classList.contains('active')) {
-    renderDashboard();
+async function carregarDados() {
+  try {
+    const [resSol, resProd] = await Promise.all([
+      fetch(SB_URL + '/rest/v1/solicitacoes?select=*&order=created_at.desc', { headers: SB_H }),
+      fetch(SB_URL + '/rest/v1/solicitacao_produtos?select=*', { headers: SB_H })
+    ]);
+    dados = await resSol.json();
+    const prods = await resProd.json();
+    produtosMap = {};
+    prods.forEach(p => { if (!produtosMap[p.protocolo]) produtosMap[p.protocolo] = []; produtosMap[p.protocolo].push(p); });
+    document.getElementById('loading-wrap').style.display = 'none';
+    document.getElementById('board-wrap').style.display   = 'block';
+    renderBoard();
+    if (document.getElementById('tab-dashboard').classList.contains('active')) renderDashboard();
+  } catch(e) {
+    document.getElementById('loading-wrap').innerHTML = '<span style="color:#A32D2D">Erro ao carregar dados.</span>';
   }
-} catch (e) {
-  document.getElementById('loading-wrap').innerHTML =
-    '<span style="color:#A32D2D">Erro ao carregar dados.</span>';
 }
 
 // ── RENDER BOARD ──────────────────────────────────────────────────────────────
